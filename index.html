@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<!-- ============================================================
+     TRASTES — Escuela de Luthería
+     index.html — Versión editorial premium v3
+     ────────────────────────────────────────────────────────────
+     NUEVO:
+       · Hero editorial dividido (foto izquierda / texto derecho)
+       · Sección Quiénes Somos
+       · Sección Beneficios
+       · Sección Manifiesto nueva (reemplaza la anterior)
+     CONSERVADO SIN CAMBIOS:
+       · Cursor · Loader · Header · Mobile Menu
+       · Entorno · Materiales · Cursos · Proceso
+       · Manifiesto original · Timeline · FAQ
+       · Formulario · Footer
+     ============================================================ -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRASTES — Escuela de Luthería</title>
+  <meta name="description" content="Escuela de luthería de alta formación. Arte, técnica y sonido en un mismo espacio." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       CURSOR PERSONALIZADO — CONSERVADO SIN CAMBIOS
+       ============================================================ -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor__dot"  id="cursor-dot"></div>
+    <div class="cursor__ring" id="cursor-ring"></div>
+  </div>
+
+
+  <!-- ============================================================
+       LOADER INICIAL — CONSERVADO SIN CAMBIOS
+       ============================================================ -->
+  <div class="loader" id="loader" role="status" aria-label="Cargando">
+    <div class="loader__content">
+      <div class="loader__brand">
+        <span class="loader__brand-word">TRASTES</span>
+        <span class="loader__brand-sub">Escuela de Luthería</span>
+      </div>
+      <div class="loader__progress">
+        <div class="loader__progress-bar" id="loader-progress-bar"></div>
+      </div>
+      <span class="loader__counter" id="loader-counter" aria-live="polite">0</span>
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       HEADER STICKY — CONSERVADO SIN CAMBIOS
+       ============================================================ -->
+<header class="site-header" id="site-header">
+
+  <div class="header__inner">
+
+    <nav class="header__nav header__nav--left" aria-label="Secciones primarias">
+      <a href="#quienes-somos" class="header__nav-link">Nosotros</a>
+      <a href="#entorno" class="header__nav-link">Entorno</a>
+      <a href="#cursos" class="header__nav-link">Cursos</a>
+    </nav>
+
+    <a href="#hero" class="header__logo" aria-label="Trastes — inicio">
+      <span class="header__logo-word">TRASTES</span>
+      <span class="header__logo-tagline">Escuela de Luthería</span>
+    </a>
+
+    <nav class="header__nav header__nav--right" aria-label="Secciones secundarias">
+      <a href="#proceso" class="header__nav-link">Proceso</a>
+      <a href="#recorrido" class="header__nav-link">Recorrido</a>
+      <a href="#admision" class="header__nav-link header__nav-link--cta">Admisión</a>
+    </nav>
+
+    <button
+      class="header__hamburger"
+      id="hamburger-btn"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span class="hamburger__line hamburger__line--top"></span>
+      <span class="hamburger__line hamburger__line--mid"></span>
+      <span class="hamburger__line hamburger__line--bot"></span>
+    </button>
+
+  </div>
+
+</header>
+
+
+
+  <!-- ============================================================
+       MOBILE MENU — CONSERVADO SIN CAMBIOS (links actualizados)
+       ============================================================ -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true" role="dialog" aria-label="Menú de navegación">
+
+    <button class="mobile-menu__close" id="mobile-menu-close" aria-label="Cerrar menú">
+      <span></span><span></span>
+    </button>
+
+    <nav class="mobile-menu__nav" aria-label="Navegación mobile">
+      <a href="#hero"          class="mobile-menu__link" data-index="00">Inicio</a>
+      <a href="#quienes-somos" class="mobile-menu__link" data-index="01">Nosotros</a>
+      <a href="#beneficios"    class="mobile-menu__link" data-index="02">Beneficios</a>
+      <a href="#entorno"       class="mobile-menu__link" data-index="03">Entorno</a>
+      <a href="#cursos"        class="mobile-menu__link" data-index="04">Cursos</a>
+      <a href="#proceso"       class="mobile-menu__link" data-index="05">Proceso</a>
+      <a href="#recorrido"     class="mobile-menu__link" data-index="06">Recorrido</a>
+      <a href="#admision"      class="mobile-menu__link mobile-menu__link--cta" data-index="07">Admisión</a>
+    </nav>
+
+    <div class="mobile-menu__footer">
+      <a href="mailto:admisiones@trastes.edu.ar" class="mobile-menu__email">admisiones@trastes.edu.ar</a>
+      <p class="mobile-menu__copy">© 2025 TRASTES</p>
+    </div>
+
+  </div>
+
+
+  <!-- ============================================================
+       HERO NUEVO — EDITORIAL DIVIDIDO
+       Layout 55/45: foto dominante izquierda, texto derecho sobre beige.
+       Sin overlay oscuro. Inspiración: portada editorial de revista
+       de diseño artesanal — la foto manda, el texto respira.
+       ============================================================ -->
+
+
+<section class="hero" id="hero" aria-label="Inicio — TRASTES Escuela de Luthería">
+
+  <!-- ── Imagen principal (85–90% del ancho, con margen exterior) ── -->
+  <div class="hero__frame">
+    <figure class="hero__figure">
+      <img
+        src="assets/1212-08.png"
+        alt="Luthier trabajando madera con luz natural en el taller de TRASTES"
+        class="hero__bg"
+        id="hero-parallax-img"
+        loading="eager"
+        fetchpriority="high"
+        width="1600"
+        height="1067"
+      />
+
+      <!-- Texto editorial superpuesto sobre la foto -->
+      <div class="hero__overlay-content">
+
+        <!-- Eyebrow -->
+        <p class="hero__eyebrow reveal-hero" style="--hd:0.05s">
+          <span class="hero__eyebrow-line" aria-hidden="true"></span>
+          Escuela de Luthería
+        </p>
+
+<h1 class="hero__title reveal-hero" style="--hd:0.15s">
+  El arte de<br>
+  crear <em>sonido</em>
+</h1>
+
+        <!-- Bajada -->
+        <p class="hero__desc reveal-hero" style="--hd:0.25s">
+         Luthería artesanal para dominar la técnica, comprender<br>
+          la madera y desarrollar instrumentos únicos.
+        </p>
+
+        <!-- CTAs -->
+        <div class="hero__cta-group reveal-hero" style="--hd:0.35s">
+          <a href="#cursos"   class="btn btn--hero-primary">Conocé nuestros cursos</a>
+      
+        </div>
+
+      </div>
+      <!-- /hero__overlay-content -->
+
+
+    </figure>
+    <!-- /hero__figure -->
+
+    <!-- ── Bloque flotante de imágenes ── -->
+    <!-- Posicionado abajo-derecha, parcialmente sobre la foto principal -->
+    <div class="hero__gallery" id="hero-gallery" aria-hidden="true">
+      <div class="hero__gallery-track" id="hero-gallery-track">
+
+        <div class="hero__gallery-slide hero__gallery-slide--active">
+          <img
+            src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=600&q=85&auto=format&fit=crop"
+            alt=""
+            loading="lazy"
+            width="600"
+            height="800"
+          />
+        </div>
+
+        <div class="hero__gallery-slide">
+          <img
+            src="https://images.unsplash.com/photo-1471478331149-c72f17e33c73?w=600&q=85&auto=format&fit=crop"
+            alt=""
+            loading="lazy"
+            width="600"
+            height="800"
+          />
+        </div>
+
+        <div class="hero__gallery-slide">
+          <img
+            src="https://images.unsplash.com/photo-1574169208507-84376144848b?w=600&q=85&auto=format&fit=crop"
+            alt=""
+            loading="lazy"
+            width="600"
+            height="800"
+          />
+        </div>
+
+        <div class="hero__gallery-slide">
+          <img
+            src="https://images.unsplash.com/photo-1600494448853-8c8e3c4f2a1d?w=600&q=85&auto=format&fit=crop"
+            alt=""
+            loading="lazy"
+            width="600"
+            height="800"
+          />
+        </div>
+
+        <div class="hero__gallery-slide">
+          <img
+            src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?w=600&q=85&auto=format&fit=crop"
+            alt=""
+            loading="lazy"
+            width="600"
+            height="800"
+          />
+        </div>
+
+      </div>
+      <!-- Indicadores de posición -->
+      <div class="hero__gallery-dots" id="hero-gallery-dots" aria-hidden="true">
+        <span class="hero__gallery-dot hero__gallery-dot--active"></span>
+        <span class="hero__gallery-dot"></span>
+        <span class="hero__gallery-dot"></span>
+        <span class="hero__gallery-dot"></span>
+        <span class="hero__gallery-dot"></span>
+      </div>
+    </div>
+    <!-- /hero__gallery -->
+
+  </div>
+  <!-- /hero__frame -->
+
+</section>
+<!-- /HERO NUEVO -->
+
+
+  <!-- ============================================================
+       SECCIÓN NUEVA — QUIÉNES SOMOS
+       Layout editorial: texto izquierda con aire + imagen derecha grande.
+       Credibilidad y filosofía de la escuela.
+       ============================================================ -->
+  <section class="about" id="quienes-somos" aria-label="Quiénes somos">
+
+    <div class="about__inner">
+
+      <!-- Columna texto -->
+      <div class="about__text">
+        <div class="about__label reveal-up">
+          
+          <span class="about__label-text">Sobre nosotros</span>
+        </div>
+
+        <h2 class="about__title reveal-up" style="--delay: 0.1s">
+          Un espacio para aprender el oficio<br />
+          <em> de la luthería</em>
+        </h2>
+
+        <div class="about__body reveal-up">
+          <p>
+            Somos un espacio dedicado a formar Luthiers especializados en la construcción, restauración y ajuste de instrumentos, combinando técnicas artesanales con una metodología práctica. 
+          </p>
+          <p>
+            Ofrecemos cursos para quienes desean iniciarse o perfeccionarse desde la selección de la madera hasta el ajuste final del instrumento.
+          </p>
+        </div>
+
+        <!-- Datos editoriales -->
+        <div class="about__figures reveal-up" aria-label="Datos de la escuela">
+          <div class="about__figure">
+            <span class="about__figure-num">10+</span>
+            <span class="about__figure-label">Años de trayectoria</span>
+          </div>
+          <div class="about__figure-sep" aria-hidden="true"></div>
+          <div class="about__figure">
+            <span class="about__figure-num">222+</span>
+            <span class="about__figure-label">Alumnos egresados</span>
+          </div>
+          <div class="about__figure-sep" aria-hidden="true"></div>
+          <div class="about__figure">
+            <span class="about__figure-num">4</span>
+            <span class="about__figure-label">Alumnos por grupo</span>
+          </div>
+        </div>
+      </div>
+      <!-- Columna imagen -->
+      <div class="about__image-col reveal-up" style="--delay: 0.05s">
+        <div class="about__image-frame">
+          <img
+            src="assets/img2-02.png"
+            alt="Maestro luthier trabajando en el taller de TRASTES"
+            class="about__image"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /QUIÉNES SOMOS -->
+
+
+  <!-- ============================================================
+       SECCIÓN NUEVA — BENEFICIOS
+       Cards editoriales premium con hover sutil.
+       Sin íconos genéricos — solo tipografía y aire.
+       ============================================================ -->
+ 
+<section class="benefits" id="beneficios" aria-label="Por qué TRASTES">
+
+  <div class="benefits__header reveal-up">
+
+    <span class="section-num">¿POR QUÉ ELEGIRNOS?</span>
+
+    <h2 class="benefits__title">
+      Beneficios de la <em>profesión</em>
+    </h2>
+
+  </div>
+
+    <div class="benefits__grid">
+
+      <!-- Card 01 -->
+      <article class="benefit-card reveal-up" style="--delay: 0.10s">
+        <div class="benefit-card__inner">
+          <span class="benefit-card__num" aria-hidden="true">01</span>
+          <h3 class="benefit-card__title">Aprendizaje<br /><em>práctico</em></h3>
+          <p class="benefit-card__desc">Trabajás desde el primer día sobre instrumentos reales, con herramientas profesionales y supervisión constante.</p>
+        </div>
+      </article>
+
+      <!-- Card 02 -->
+      <article class="benefit-card reveal-up" style="--delay: 0.20s">
+        <div class="benefit-card__inner">
+          <span class="benefit-card__num" aria-hidden="true">02</span>
+          <h3 class="benefit-card__title">Grupos<br /><em>reducidos</em></h3>
+          <p class="benefit-card__desc">Máximo 4 alumnos por grupo. Seguimiento personalizado en cada etapa del proceso de construcción.</p>
+        </div>
+      </article>
+
+      <!-- Card 03 -->
+      <article class="benefit-card reveal-up" style="--delay: 0.30s">
+        <div class="benefit-card__inner">
+          <span class="benefit-card__num" aria-hidden="true">03</span>
+          <h3 class="benefit-card__title">Maestros<br /><em>luthiers</em></h3>
+          <p class="benefit-card__desc">Aprendé junto a profesionales con décadas de experiencia en construcción, restauración y ajuste de instrumentos.</p>
+        </div>
+      </article>
+
+      <!-- Card 04 -->
+      <article class="benefit-card reveal-up" style="--delay: 0.40s">
+        <div class="benefit-card__inner">
+          <span class="benefit-card__num" aria-hidden="true">04</span>
+          <h3 class="benefit-card__title">Taller<br /><em>equipado</em></h3>
+          <p class="benefit-card__desc">Herramientas profesionales disponibles durante toda la formación. Sin necesidad de invertir para empezar.</p>
+        </div>
+      </article>
+
+      <!-- Card 05 -->
+      <article class="benefit-card reveal-up" style="--delay: 0.50s">
+        <div class="benefit-card__inner">
+          <span class="benefit-card__num" aria-hidden="true">05</span>
+          <h3 class="benefit-card__title">Método<br /><em>progresivo</em></h3>
+          <p class="benefit-card__desc">Cada etapa construye nuevas habilidades sin dejar vacíos técnicos. Del fundamento a la complejidad artesanal.</p>
+        </div>
+      </article>
+
+      <!-- Card 06 -->
+      <article class="benefit-card reveal-up" style="--delay: 0.60s">
+        <div class="benefit-card__inner">
+          <span class="benefit-card__num" aria-hidden="true">06</span>
+          <h3 class="benefit-card__title">Proyecto<br /><em>final propio</em></h3>
+          <p class="benefit-card__desc">Al terminar, el instrumento que construiste es tuyo. Una pieza única que lleva tu firma y tu historia.</p>
+        </div>
+      </article>
+
+    </div>
+
+  </section>
+  <!-- /BENEFICIOS -->
+
+
+  <!-- ============================================================
+       SECCIÓN 01 — EL ENTORNO ACÚSTICO
+       CONSERVADA SIN CAMBIOS
+       ============================================================ -->
+  <section class="environment" id="entorno" aria-label="El entorno acústico">
+
+    <div class="environment__grid">
+
+      <div class="environment__image-wrap reveal-up">
+        <div class="environment-slider">
+          <img src="assets/tallerrrrr-02.png" alt="Taller de luthería — vista general" loading="lazy" />
+          <img src="assets/taller2-02.png" alt="Taller de luthería — detalle de herramientas" loading="lazy" />
+          <img src="assets/taller3-02.png" alt="Taller de luthería — banco de trabajo" loading="lazy" />
+          
+        </div>
+      </div>
+
+      <div class="environment__content reveal-up" style="--delay: 0.2s">
+        <span class="section-num section-num--light">El Taller</span>
+        <h2 class="environment__title">
+          Un espacio donde<br />
+          <em>el sonido</em> toma forma.
+        </h2>
+        <p class="environment__body">
+          Nuestro taller fue diseñado bajo principios de acústica arquitectónica para que el ambiente mismo sea parte de la formación. Cada superficie, cada material, cada herramienta responde a una lógica sonora.
+        </p>
+        <ul class="environment__list">
+          <li class="environment__list-item">
+            <span class="environment__list-dot"></span>
+            Techo de doble altura con paneles absorbentes
+          </li>
+          <li class="environment__list-item">
+            <span class="environment__list-dot"></span>
+            Área de medición acústica digital integrada
+          </li>
+    
+          <li class="environment__list-item">
+            <span class="environment__list-dot"></span>
+            Sala de prueba y afinación con monitoreo en tiempo real
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="environment__texture" aria-hidden="true"></div>
+
+  </section>
+
+
+  <!-- ============================================================
+       SECCIÓN 02 — MATERIALIDAD
+       CONSERVADA SIN CAMBIOS
+       ============================================================ -->
+  <section class="materials" id="materiales" aria-label="Materialidad">
+    <div class="materials__header reveal-up">
+      <span class="section-num">Maderas</span>
+      <h2 class="materials__title">
+        La madera como <em>lenguaje</em>
+      </h2>
+      
+    </div>
+
+    <div class="materials__grid">
+
+      <article class="material-card reveal-up" style="--delay: 0.1s">
+        <div class="material-card__image-wrap">
+          <img
+            src="assets/made11-03.png"
+            alt="Tabla de abeto europeo para tapa armónica"
+            class="material-card__image hover-img"
+            loading="lazy"
+          />
+   
+          </div>
+        
+        <div class="material-card__body">
+          <span class="material-card__num">I</span>
+          <h3 class="material-card__name">Apetto<br /><em>Europeo</em></h3>
+          <p class="material-card__desc">Tapa armónica de referencia. Densidad 420–480 kg/m³. Respuesta brillante en los armónicos superiores, proyección limpia y articulación precisa.</p>
+          <div class="material-card__tag">Tapa armónica</div>
+        </div>
+      </article>
+
+      <article class="material-card reveal-up" style="--delay: 0.25s">
+        <div class="material-card__image-wrap">
+          <img
+            src="assets/made22-03.png"
+            alt="Tabla de jacarandá brasileño para fondo y aros"
+            class="material-card__image hover-img"
+            loading="lazy"
+          />
+         
+          </div>
+       
+        <div class="material-card__body">
+          <span class="material-card__num">II</span>
+          <h3 class="material-card__name">Jacarandá<br /><em>Brasileño</em></h3>
+          <p class="material-card__desc">Fondo y aros de alto prestigio. Densidad 850–950 kg/m³. Calidez densa en los graves, sustain prolongado y firma tonal inconfundible.</p>
+          <div class="material-card__tag">Fondo y aros</div>
+        </div>
+      </article>
+
+      <article class="material-card reveal-up" style="--delay: 0.4s">
+        <div class="material-card__image-wrap">
+          <img
+            src="assets/made33-03.png"
+            alt="Tabla de ébano de Macasar para diapasón"
+            class="material-card__image hover-img"
+            loading="lazy"
+          />
+         
+          </div>
+        <div class="material-card__body">
+          <span class="material-card__num">III</span>
+          <h3 class="material-card__name">Ébano<br /><em>de Macasar</em></h3>
+          <p class="material-card__desc">Diapasón de élite. Densidad 1050–1200 kg/m³. Dureza extrema, tacto sedoso, respuesta al ataque inmediata.</p>
+          <div class="material-card__tag">Diapasón</div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECCIÓN 03 — CURSOS
+       CONSERVADA SIN CAMBIOS
+       ============================================================ -->
+  <section class="courses" id="cursos" aria-label="Especializaciones técnicas">
+
+  <div class="courses__header reveal-up">
+  <span class="section-num">Cursos</span>
+
+  <h2 class="courses__title">
+    Especializaciones <em>técnicas</em>
+  </h2>
+</div>
+    <div class="courses__grid">
+
+      <article class="course-block reveal-up" style="--delay: 0.1s">
+        <div class="course-block__image-wrap">
+          <img
+            src="assets/curssso-02.png"
+            alt="Construcción artesanal de guitarra clásica"
+            class="course-block__image hover-img"
+            loading="lazy"
+          />
+          <span class="course-block__roman">I</span>
+        </div>
+        <div class="course-block__body">
+          <h3 class="course-block__title">Construcción<br /><em>de Instrumento</em></h3>
+          <p class="course-block__desc">El programa fundacional. De la selección de maderas a la puesta a punto final. El alumno construye una guitarra acústica de concierto con supervisión individual permanente.</p>
+          <div class="course-block__meta">
+            <span class="course-block__meta-item">12 semanas</span>
+            <span class="course-block__meta-sep">·</span>
+            <span class="course-block__meta-item">Presencial</span>
+          </div>
+          <a href="curso-guitarra.html" class="course-block__link">Inscribirse →</a>
+        </div>
+      </article>
+
+      <article class="course-block reveal-up" style="--delay: 0.25s">
+        <div class="course-block__image-wrap">
+          <img
+            src="assets/c2-02.png"
+            alt="Análisis acústico de instrumento"
+            class="course-block__image hover-img"
+            loading="lazy"
+          />
+          <span class="course-block__roman">II</span>
+        </div>
+        <div class="course-block__body">
+          <h3 class="course-block__title">Acústica<br /><em>Avanzada</em></h3>
+          <p class="course-block__desc">Física del sonido aplicada al instrumento. Análisis modal, frecuencias de resonancia, diseño de braceado y optimización tonal mediante medición digital.</p>
+          <div class="course-block__meta">
+            <span class="course-block__meta-item">8 semanas</span>
+            <span class="course-block__meta-sep">·</span>
+            <span class="course-block__meta-item">Híbrido</span>
+          </div>
+          <a href="#admision" class="course-block__link">Inscribirse →</a>
+        </div>
+      </article>
+
+      <article class="course-block reveal-up" style="--delay: 0.4s">
+        <div class="course-block__image-wrap">
+          <img
+            src="assets/c3-02.png"
+            alt="Restauración de guitarra histórica"
+            class="course-block__image hover-img"
+            loading="lazy"
+          />
+          <span class="course-block__roman">III</span>
+        </div>
+        <div class="course-block__body">
+          <h3 class="course-block__title">Restauración<br /><em>y Conservación</em></h3>
+          <p class="course-block__desc">Para quienes trabajan con instrumentos de época. Diagnóstico estructural, reconstrucción de partes faltantes, consolidación de barnices históricos.</p>
+          <div class="course-block__meta">
+            <span class="course-block__meta-item">10 semanas</span>
+            <span class="course-block__meta-sep">·</span>
+            <span class="course-block__meta-item">Presencial</span>
+          </div>
+          <a href="#admision" class="course-block__link">Inscribirse →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECCIÓN 04 — PROCESO
+       CONSERVADA SIN CAMBIOS
+       ============================================================ -->
+  <section class="process" id="proceso" aria-label="El proceso de la materia">
+
+    <div class="process__inner">
+
+      <div class="process__list-wrap reveal-up">
+        <span class="section-num">Proceso</span>
+        <h2 class="process__title">
+          El proceso de <em>la materia</em>
+        </h2>
+
+        <ol class="process__list" aria-label="Etapas del proceso de luthería">
+          <li class="process__step" data-step="01">
+            <span class="process__step-num">01</span>
+            <div class="process__step-content">
+              <h3 class="process__step-title">Selección y secado</h3>
+              <p class="process__step-body">La madera elige al luthier antes de que el luthier la elija. Aprendemos a leer las vetas, la densidad y el sonido de los giros antes de cortar.</p>
+            </div>
+          </li>
+          <li class="process__step" data-step="02">
+            <span class="process__step-num">02</span>
+            <div class="process__step-content">
+              <h3 class="process__step-title">Corte y trazado</h3>
+              <p class="process__step-body">Geometría exacta. El plano del instrumento se transfiere sobre la madera con herramientas de precisión. Cada milímetro tiene consecuencias acústicas.</p>
+            </div>
+          </li>
+          <li class="process__step" data-step="03">
+            <span class="process__step-num">03</span>
+            <div class="process__step-content">
+              <h3 class="process__step-title">Ensamble y caja</h3>
+              <p class="process__step-body">La caja de resonancia se construye pieza por pieza. El cierre de la tapa con el fondo es el momento donde el instrumento respira por primera vez.</p>
+            </div>
+          </li>
+          <li class="process__step" data-step="04">
+            <span class="process__step-num">04</span>
+            <div class="process__step-content">
+              <h3 class="process__step-title">Acabado y barniz</h3>
+              <p class="process__step-body">La goma laca aplicada a muñequilla, el barniz nitrocelulósico o los aceites naturales. El acabado protege sin matar la vibración.</p>
+            </div>
+          </li>
+          <li class="process__step" data-step="05">
+            <span class="process__step-num">05</span>
+            <div class="process__step-content">
+              <h3 class="process__step-title">Puesta a punto</h3>
+              <p class="process__step-body">El instrumento se afina por primera vez. La acción de cuerdas, la intonación y el balance final se ajustan con el músico que lo tocará.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="process__image-wrap reveal-up" style="--delay: 0.3s">
+        <img
+          src="assets/proc-03.png"
+          alt="Manos de luthier trabajando el acabado final de un instrumento"
+          class="process__image hover-img"
+          loading="lazy"
+        />
+    
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECCIÓN 05 — MANIFIESTO ORIGINAL
+       CONSERVADA SIN CAMBIOS
+       ============================================================ -->
+  <section class="manifesto" id="manifiesto" aria-label="Manifiesto">
+    <div class="manifesto__inner reveal-up">
+      <span class="manifesto__ornament" aria-hidden="true">❧</span>
+      <blockquote class="manifesto__quote">
+        <p class="manifesto__text js-manifesto">
+          "Cada instrumento que construis,<br />
+          refleja <em>paciencia y presición.</em>."
+        </p>
+      
+      </blockquote>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECCIÓN 06 — TIMELINE
+       CONSERVADA SIN CAMBIOS
+       ============================================================ -->
+  <section class="timeline" id="recorrido" aria-label="Recorrido del alumno">
+
+    <div class="timeline__header reveal-up">
+      <span class="section-num">Recorrido</span>
+      <h2 class="timeline__title">
+        El recorrido del <em>alumno</em>
+      </h2>
+    </div>
+
+    <div class="timeline__track-wrap">
+      <div class="timeline__track">
+
+        <div class="timeline__node reveal-up" >
+          <div class="timeline__node-dot"></div>
+          <div class="timeline__node-content">
+            <span class="timeline__node-week">Sem. 1–2</span>
+            <h3 class="timeline__node-title">Orientación y<br /><em>materiales</em></h3>
+            <p class="timeline__node-body">Selección de maderas. Reconocimiento acústico. Primera escucha activa de los materiales.</p>
+          </div>
+        </div>
+
+        <div class="timeline__node reveal-up" style="--delay: 0.15s">
+          <div class="timeline__node-dot"></div>
+          <div class="timeline__node-content">
+            <span class="timeline__node-week">Sem. 3–4</span>
+            <h3 class="timeline__node-title">Plano y<br /><em>geometría</em></h3>
+            <p class="timeline__node-body">Diseño de la forma del cuerpo. Trazado del mástil. Cálculo de escala y posición de trastes.</p>
+          </div>
+        </div>
+
+        <div class="timeline__node reveal-up" style="--delay: 0.25s">
+          <div class="timeline__node-dot"></div>
+          <div class="timeline__node-content">
+            <span class="timeline__node-week">Sem. 5–7</span>
+            <h3 class="timeline__node-title">Construcción<br /><em>de la caja</em></h3>
+            <p class="timeline__node-body">Doblado de aros. Ensamble de fondo y tapa. Instalación del braceado interior.</p>
+          </div>
+        </div>
+
+        <div class="timeline__node reveal-up" style="--delay: 0.35s">
+          <div class="timeline__node-dot"></div>
+          <div class="timeline__node-content">
+            <span class="timeline__node-week">Sem. 8–9</span>
+            <h3 class="timeline__node-title">Mástil y<br /><em>diapasón</em></h3>
+            <p class="timeline__node-body">Tallado del mástil. Ranuras de trastes. Encolado del diapasón y perfilado final.</p>
+          </div>
+        </div>
+
+        <div class="timeline__node reveal-up" style="--delay: 0.45s">
+          <div class="timeline__node-dot"></div>
+          <div class="timeline__node-content">
+            <span class="timeline__node-week">Sem. 10–11</span>
+            <h3 class="timeline__node-title">Acabado y<br /><em>barniz</em></h3>
+            <p class="timeline__node-body">Preparación de superficies. Aplicación de goma laca. Pulido progresivo por capas.</p>
+          </div>
+        </div>
+
+        <div class="timeline__node timeline__node--final reveal-up" style="--delay: 0.55s">
+          <div class="timeline__node-dot timeline__node-dot--final"></div>
+          <div class="timeline__node-content">
+            <span class="timeline__node-week">Semana 12</span>
+            <h3 class="timeline__node-title">Entrega<br /><em>y primera nota</em></h3>
+            <p class="timeline__node-body">Puesta a punto. Presentación pública del instrumento. Primera ejecución frente a la comunidad de la escuela.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       SECCIÓN 07 — FAQ
+       CONSERVADA SIN CAMBIOS
+       ============================================================ -->
+  <section class="faq" id="faq" aria-label="Preguntas frecuentes">
+
+    <div class="faq__header reveal-up">
+      <span class="section-num">Preguntas frecuentes</span>
+      <h2 class="faq__title">Resolvemos <em>tus dudas</em></h2>
+    </div>
+
+    <div class="faq__list reveal-up" style="--delay: 0.15s">
+
+      <div class="faq__item" id="faq-1">
+        <button class="faq__question" aria-expanded="false" aria-controls="faq-answer-1">
+          <span class="faq__question-text">¿Necesito experiencia previa en carpintería o luthería?</span>
+          <span class="faq__icon" aria-hidden="true">
+            <span class="faq__icon-bar faq__icon-bar--h"></span>
+            <span class="faq__icon-bar faq__icon-bar--v"></span>
+          </span>
+        </button>
+        <div class="faq__answer" id="faq-answer-1" role="region" aria-labelledby="faq-1">
+          <div class="faq__answer-inner">
+            <p>No es un requisito. El programa está diseñado para comenzar desde cero con un enfoque progresivo y supervisado.</p>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="faq__item" id="faq-2">
+        <button class="faq__question" aria-expanded="false" aria-controls="faq-answer-2">
+          <span class="faq__question-text">¿Necesito llevar mis herramientas al taller?</span>
+          <span class="faq__icon" aria-hidden="true">
+            <span class="faq__icon-bar faq__icon-bar--h"></span>
+            <span class="faq__icon-bar faq__icon-bar--v"></span>
+          </span>
+        </button>
+        <div class="faq__answer" id="faq-answer-2" role="region" aria-labelledby="faq-2">
+          <div class="faq__answer-inner">
+            <p>El taller provee todas las herramientas durante el programa. Al matricularse, el alumno recibe una lista de materiales personales sugeridos (escuadra de precisión, calibre, cuchillas de marcar) que representa una inversión razonable para quien desee seguir trabajando luego del programa.</p>
+        
+          </div>
+        </div>
+      </div>
+
+      <div class="faq__item" id="faq-3">
+        <button class="faq__question" aria-expanded="false" aria-controls="faq-answer-3">
+          <span class="faq__question-text">¿Qué sucede si el instrumento no queda bien al finalizar el programa?</span>
+          <span class="faq__icon" aria-hidden="true">
+            <span class="faq__icon-bar faq__icon-bar--h"></span>
+            <span class="faq__icon-bar faq__icon-bar--v"></span>
+          </span>
+        </button>
+        <div class="faq__answer" id="faq-answer-3" role="region" aria-labelledby="faq-3">
+          <div class="faq__answer-inner">
+            <p>En luthería, los accidentes son parte del proceso formativo. Cada grieta, cada error de geometría y cada falla en el barniz enseña más que diez páginas de teoría. Los docentes acompañan la resolución de cada problema como parte del aprendizaje.</p>
+          
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECCIÓN 08 — FORMULARIO DE ADMISIÓN
+       CONSERVADA SIN CAMBIOS
+       ============================================================ -->
+  <section class="admission" id="admision" aria-label="Formulario de admisión">
+
+    <div class="admission__inner">
+
+      <div class="admission__header reveal-up">
+        <span class="section-num">Admisión</span>
+        <h2 class="admission__title">
+          Comenzá tu <em>camino</em>
+        </h2>
+        <p class="admission__subtitle">
+          Completá el formulario y un coordinador académico se comunicará contigo dentro de las 48 horas hábiles para hablar sobre tu perfil e intereses.
+        </p>
+      </div>
+
+      <div class="admission__form-wrap reveal-up" style="--delay: 0.2s">
+
+        <form class="admission__form" id="admission-form" novalidate>
+
+          <div class="field">
+            <input type="text" id="field-name" class="field__input" placeholder=" " required autocomplete="name" />
+            <label for="field-name" class="field__label">Nombre completo</label>
+            <div class="field__line"></div>
+          </div>
+
+          <div class="field">
+            <input type="email" id="field-email" class="field__input" placeholder=" " required autocomplete="email" />
+            <label for="field-email" class="field__label">Correo electrónico</label>
+            <div class="field__line"></div>
+          </div>
+
+          <div class="field">
+            <select id="field-curso" class="field__input field__input--select" required>
+              <option value="" disabled selected></option>
+              <option value="construccion">Construcción de Instrumento</option>
+              <option value="acustica">Acústica Avanzada</option>
+              <option value="restauracion">Restauración y Conservación</option>
+            </select>
+            <label for="field-curso" class="field__label">Especialización de interés</label>
+            <div class="field__line"></div>
+          </div>
+
+          <div class="field">
+            <textarea id="field-message" class="field__input field__input--textarea" placeholder=" " rows="3"></textarea>
+            <label for="field-message" class="field__label">Contanos algo sobre vos (opcional)</label>
+            <div class="field__line"></div>
+          </div>
+
+          <button type="submit" class="btn btn--solid btn--submit" id="submit-btn">
+            <span class="submit-btn__text">Enviar solicitud</span>
+            <span class="submit-btn__loading" aria-hidden="true">
+              <span class="submit-btn__dot"></span>
+              <span class="submit-btn__dot"></span>
+              <span class="submit-btn__dot"></span>
+            </span>
+          </button>
+
+        </form>
+
+        <div class="admission__success" id="admission-success" aria-live="polite" aria-hidden="true">
+          <span class="admission__success-ornament" aria-hidden="true">✦</span>
+          <h3 class="admission__success-title">Solicitud recibida.</h3>
+          <p class="admission__success-body">
+            Gracias por tu interés en TRASTES. Un coordinador académico se pondrá en contacto con vos en las próximas 48 horas hábiles.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER — CONSERVADO SIN CAMBIOS
+       ============================================================ -->
+  <footer class="site-footer" aria-label="Pie de página">
+    <div class="site-footer__inner">
+
+      <div class="site-footer__brand">
+        <p class="site-footer__logo">TRASTES</p>
+        <p class="site-footer__tagline">Escuela de Luthería</p>
+        <p class="site-footer__address">
+          Av. San Juan 1847, Buenos Aires<br />
+          Argentina — C1148AAL
+        </p>
+        <p class="site-footer__contact">
+          <a href="mailto:admisiones@trastes.edu.ar">admisiones@trastes.edu.ar</a>
+        </p>
+      </div>
+
+      <div class="site-footer__nav-wrap">
+        <nav class="site-footer__nav" aria-label="Navegación del pie">
+          <div class="site-footer__nav-col">
+            <p class="site-footer__nav-heading">Programa</p>
+            <a href="#cursos"        class="site-footer__nav-link">Cursos</a>
+            <a href="#recorrido"     class="site-footer__nav-link">Recorrido</a>
+            <a href="#materiales"    class="site-footer__nav-link">Materialidad</a>
+            <a href="#proceso"       class="site-footer__nav-link">Proceso</a>
+          </div>
+          <div class="site-footer__nav-col">
+            <p class="site-footer__nav-heading">Institución</p>
+            <a href="#quienes-somos" class="site-footer__nav-link">Nosotros</a>
+            <a href="#entorno"       class="site-footer__nav-link">El entorno</a>
+            <a href="#faq"           class="site-footer__nav-link">Preguntas</a>
+            <a href="#admision"      class="site-footer__nav-link">Admisión</a>
+          </div>
+        </nav>
+        <p class="site-footer__legal">
+          © 2025 TRASTES — Escuela de Luthería. Todos los derechos reservados.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
