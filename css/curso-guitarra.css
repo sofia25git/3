@@ -1,0 +1,704 @@
+/* ============================================================
+   TRASTES — Escuela de Luthería
+   css/curso-guitarra.css
+   ────────────────────────────────────────────────────────────
+   Hoja de estilos EXCLUSIVA de la página de detalle del curso
+   de Construcción de Guitarras.
+
+   IMPORTANTE — esta hoja NO redefine tokens ni componentes ya
+   existentes en styles.css (hero, header, botones, section-num,
+   reveal-up, benefits, timeline, etc.). Ese archivo se reutiliza
+   tal cual: esta hoja solo agrega los componentes nuevos que el
+   contenido de esta página necesita (ficha técnica, galería de
+   taller, profesores, testimonios, resultado final y CTA final),
+   construidos siempre con las mismas variables de :root definidas
+   en styles.css (colores, tipografías, espaciados, transiciones).
+
+   Índice:
+     01. Breadcrumb
+     02. Hero de curso — extensión puntual del hero base
+     03. Ficha técnica ("Todo lo que necesitás saber")
+     04. Galería del taller
+     05. Profesores
+     06. Testimonios
+     07. Resultado final
+     08. CTA final
+     09. Responsive
+   ============================================================ */
+
+
+/* ============================================================
+   01. BREADCRUMB
+   Barra angosta debajo del header fijo. Comunica la jerarquía
+   Home → Cursos → Curso de Construcción de Guitarras sin romper
+   el ritmo editorial del sitio (misma tipografía que section-num).
+   ============================================================ */
+
+.breadcrumb {
+  /* Espacio para no quedar tapado por el header fijo (--header-h) */
+  padding: calc(var(--header-h) + 22px) var(--container-pad) 18px;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.breadcrumb__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+}
+
+.breadcrumb__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.breadcrumb__link,
+.breadcrumb__current {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.breadcrumb__link {
+  color: rgba(24, 9, 6, 0.45);
+  transition: color var(--transition-fast);
+}
+.breadcrumb__link:hover,
+.breadcrumb__link:focus { color: var(--color-wine); }
+
+.breadcrumb__current { color: var(--color-wine); }
+
+.breadcrumb__sep {
+  color: rgba(24, 9, 6, 0.25);
+  font-family: var(--font-serif);
+  font-size: 12px;
+}
+
+
+/* ============================================================
+   02. HERO DE CURSO — extensión puntual
+   Reutiliza .hero / .hero__frame / .hero__figure /
+   .hero__overlay-content / .hero__eyebrow / .hero__title /
+   .hero__desc / .hero__cta-group / .btn--hero-primary /
+   .btn--hero-secondary TAL CUAL están definidos en styles.css.
+   Acá solo se agrega la fila de datos (duración / modalidad /
+   cupos) que no existe en el hero de Home.
+   ============================================================ */
+
+.course-hero__meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(14px, 2vw, 28px);
+  margin-bottom: clamp(20px, 3vh, 32px);
+}
+
+.course-hero__meta-item {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: var(--font-sans);
+  color: #180906;
+}
+
+.course-hero__meta-value {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.course-hero__meta-label {
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(24, 9, 6, 0.55);
+}
+
+.course-hero__meta-sep {
+  width: 1px;
+  height: 22px;
+  background: rgba(24, 9, 6, 0.2);
+  flex-shrink: 0;
+}
+
+
+/* ============================================================
+   03. FICHA TÉCNICA — "Todo lo que necesitás saber"
+   Lista editorial de dos columnas (término / valor), en la misma
+   lógica visual que .environment__list pero adaptada a formato
+   de datos. Fondo crema para separarse del hero y de la grilla
+   de aprendizajes que la rodea.
+   ============================================================ */
+
+.techsheet {
+  padding: var(--section-padding) var(--container-pad);
+  background: var(--color-cream);
+  border-top: 1px solid rgba(24, 9, 6, 0.1);
+}
+
+.techsheet__inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.techsheet__header { max-width: 360px; }
+
+.techsheet__title {
+  font-family: var(--font-serif);
+  font-size: clamp(35px, 4.5vw, 65px);
+  font-weight: 300;
+  line-height: 1.1;
+  margin: 10px 0 24px;
+  color: var(--color-black);
+}
+.techsheet__title em { font-style: italic; color: var(--color-wine); }
+
+.techsheet__intro {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.85;
+  color: rgba(24, 9, 6, 0.55);
+}
+
+.techsheet__list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(24, 9, 6, 0.12);
+}
+
+.techsheet__row {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(24, 9, 6, 0.12);
+}
+
+.techsheet__term {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(24, 9, 6, 0.4);
+  padding-top: 2px;
+}
+
+.techsheet__value {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-black);
+}
+
+
+/* ============================================================
+   04. GALERÍA DEL TALLER
+   Grilla editorial de alturas variables (masonry vía CSS grid +
+   row-span). Preparada para reemplazar cada imagen fácilmente:
+   cada <figure> trae su comentario "REEMPLAZAR IMAGEN NN".
+   ============================================================ */
+
+.workshop-gallery {
+  padding: var(--section-padding) var(--container-pad);
+  border-top: 1px solid rgba(24, 9, 6, 0.1);
+}
+
+.workshop-gallery__header {
+  max-width: var(--container-max);
+  margin: 0 auto 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(24, 9, 6, 0.1);
+}
+
+.workshop-gallery__title {
+  font-family: var(--font-serif);
+  font-size: clamp(35px, 4.5vw, 65px);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--color-black);
+}
+.workshop-gallery__title em { font-style: italic; color: var(--color-wine); }
+
+.workshop-gallery__grid {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 130px;
+  gap: 6px;
+}
+
+.workshop-gallery__item {
+  position: relative;
+  overflow: hidden;
+  cursor: none;
+}
+
+/* Alternancia editorial de tamaños — se ajusta manualmente por
+   figura para lograr el efecto "collage de taller", no una grilla
+   pareja de e-commerce. */
+.workshop-gallery__item--tall   { grid-row: span 3; }
+.workshop-gallery__item--medium { grid-row: span 2; }
+.workshop-gallery__item--wide   { grid-column: span 2; grid-row: span 2; }
+
+.workshop-gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(15%);
+  transition: transform var(--transition-slow), filter var(--transition-slow);
+}
+.workshop-gallery__item:hover img { transform: scale(1.05); filter: grayscale(0%); }
+
+.workshop-gallery__caption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 14px 16px;
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-cream);
+  background: linear-gradient(to top, rgba(26,9,5,0.75), transparent);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+.workshop-gallery__item:hover .workshop-gallery__caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ── Lightbox (activado por curso-guitarra.js) ── */
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: rgba(26, 9, 5, 0.92);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-medium);
+}
+.gallery-lightbox.is-open { opacity: 1; pointer-events: auto; }
+
+.gallery-lightbox__img {
+  max-width: min(1100px, 92vw);
+  max-height: 86vh;
+  object-fit: contain;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.gallery-lightbox__close {
+  position: absolute;
+  top: 28px;
+  right: clamp(24px, 5vw, 64px);
+  width: 40px;
+  height: 40px;
+  color: var(--color-beige);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 1px solid rgba(226,217,203,0.4);
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+.gallery-lightbox__close:hover { border-color: var(--color-beige); color: var(--color-blue); }
+
+
+/* ============================================================
+   05. PROFESORES
+   Dos bloques editoriales foto + texto, en espejo. Misma
+   sobriedad tipográfica que .about — sin tarjetas con sombra.
+   ============================================================ */
+
+.teachers {
+  padding: var(--section-padding) var(--container-pad);
+  background: var(--color-cream);
+  border-top: 1px solid rgba(24, 9, 6, 0.1);
+}
+
+.teachers__header {
+  max-width: var(--container-max);
+  margin: 0 auto 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(24, 9, 6, 0.1);
+}
+
+.teachers__title {
+  font-family: var(--font-serif);
+  font-size: clamp(35px, 4.5vw, 65px);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--color-black);
+}
+.teachers__title em { font-style: italic; color: var(--color-wine); }
+
+.teachers__grid {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+
+.teacher {
+  display: flex;
+  flex-direction: column;
+}
+
+.teacher__image-wrap {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+.teacher__image {
+  width: 100%; height: 100%; object-fit: cover;
+  object-position: center top;
+  filter: grayscale(35%);
+  transition: filter var(--transition-slow), transform var(--transition-slow);
+}
+.teacher__image-wrap:hover .teacher__image {
+  filter: grayscale(0%);
+  transform: scale(1.03);
+}
+
+.teacher__name {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--color-black);
+  margin-bottom: 6px;
+}
+.teacher__name em { font-style: italic; color: var(--color-wine); }
+
+.teacher__role {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-wine);
+  margin-bottom: 18px;
+}
+
+.teacher__bio {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.85;
+  color: rgba(24, 9, 6, 0.6);
+  max-width: 46ch;
+}
+
+
+/* ============================================================
+   06. TESTIMONIOS
+   Citas editoriales en grilla — sin sliders. Fondo con la misma
+   textura fotográfica velada que .manifesto / .faq.
+   ============================================================ */
+
+.testimonials {
+  position: relative;
+  overflow: hidden;
+  padding: var(--section-padding) var(--container-pad);
+  background-image: url('../assets/nuevofondo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top: 1px solid rgba(24, 9, 6, 0.1);
+  border-bottom: 1px solid rgba(24, 9, 6, 0.1);
+}
+.testimonials::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(226, 217, 203, 0.82);
+  z-index: 0;
+}
+
+.testimonials__header,
+.testimonials__grid {
+  position: relative;
+  z-index: 1;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.testimonials__header {
+  margin-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.testimonials__title {
+  font-family: var(--font-serif);
+  font-size: clamp(35px, 4.5vw, 65px);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--color-black);
+}
+.testimonials__title em { font-style: italic; color: var(--color-wine); }
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.testimonial { display: flex; flex-direction: column; }
+
+.testimonial__ornament {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  color: var(--color-wine);
+  opacity: 0.6;
+  margin-bottom: 20px;
+}
+
+.testimonial__quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--color-black);
+  margin-bottom: 24px;
+}
+
+.testimonial__author {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-wine);
+  padding-top: 16px;
+  border-top: 1px solid rgba(24, 9, 6, 0.15);
+}
+.testimonial__author span {
+  display: block;
+  margin-top: 4px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  color: rgba(24, 9, 6, 0.45);
+}
+
+
+/* ============================================================
+   07. RESULTADO FINAL
+   Texto + imagen, misma estructura que .about (columna de texto
+   + columna de imagen grande), con foco en el cierre del curso.
+   ============================================================ */
+
+.outcome {
+  padding: var(--section-padding) var(--container-pad);
+  border-top: 1px solid rgba(24, 9, 6, 0.1);
+}
+
+.outcome__inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.outcome__image-frame {
+  aspect-ratio: 5 / 4;
+  overflow: hidden;
+}
+.outcome__image {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+.outcome__image-frame:hover .outcome__image { transform: scale(1.04); }
+
+.outcome__title {
+  font-family: var(--font-serif);
+  font-size: clamp(35px, 4.5vw, 65px);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--color-black);
+  margin: 10px 0 32px;
+  max-width: 14ch;
+}
+.outcome__title em { font-style: italic; color: var(--color-wine); }
+
+.outcome__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.outcome__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 22px 0;
+  border-top: 1px solid rgba(24, 9, 6, 0.1);
+}
+.outcome__item:last-child { border-bottom: 1px solid rgba(24, 9, 6, 0.1); }
+
+.outcome__item-num {
+  font-family: var(--font-serif);
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--color-wine);
+  letter-spacing: 0.1em;
+  padding-top: 3px;
+}
+
+.outcome__item-body h3 {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-black);
+  margin-bottom: 6px;
+}
+
+.outcome__item-body p {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.75;
+  color: rgba(24, 9, 6, 0.55);
+  max-width: 46ch;
+}
+
+
+/* ============================================================
+   08. CTA FINAL
+   Bloque de conversión de gran formato, misma lógica cromática
+   que .admission (fondo vino) pero centrado y sin formulario:
+   dirige a la sección de admisión real del sitio (index.html).
+   ============================================================ */
+
+.final-cta {
+  position: relative;
+  overflow: hidden;
+  padding: calc(var(--section-padding) * 1.15) var(--container-pad);
+  background: var(--color-wine);
+  background-image: radial-gradient(circle, rgba(226,217,203,0.035) 1px, transparent 1px);
+  background-size: 28px 28px;
+  text-align: center;
+}
+
+.final-cta__inner {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.final-cta__ornament {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 26px;
+  color: var(--color-blue);
+  opacity: 0.7;
+  margin-bottom: 28px;
+}
+
+.final-cta__title {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 5.5vw, 72px);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--color-beige);
+  margin-bottom: 20px;
+}
+.final-cta__title em { font-style: italic; color: var(--color-blue); }
+
+.final-cta__body {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(226, 217, 203, 0.55);
+  max-width: 46ch;
+  margin: 0 auto 40px;
+}
+
+.final-cta__group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Botón sólido celeste — único acento de color nuevo en la página,
+   reservado para la acción de conversión más importante. Sigue el
+   mismo patrón de .btn (relleno que sube desde abajo en hover). */
+.btn--cta-final {
+  background: var(--color-blue);
+  color: var(--color-black);
+  border: 1px solid var(--color-blue);
+}
+.btn--cta-final::before { background: var(--color-beige); }
+.btn--cta-final:hover::before { height: 100%; }
+.btn--cta-final:hover { border-color: var(--color-beige); }
+
+
+/* ============================================================
+   09. RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1100px) {
+  .techsheet__inner { grid-template-columns: 1fr; gap: 40px; }
+  .testimonials__grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 1023px) {
+  .teachers__grid { grid-template-columns: 1fr; gap: 56px; }
+  .outcome__inner { grid-template-columns: 1fr; gap: 40px; }
+  .workshop-gallery__grid { grid-template-columns: repeat(2, 1fr); }
+  .workshop-gallery__item--wide { grid-column: span 2; }
+}
+
+@media (max-width: 640px) {
+  .breadcrumb { padding: calc(var(--header-h) + 14px) 20px 14px; }
+  .course-hero__meta { gap: 14px; }
+  .techsheet__row { grid-template-columns: 1fr; gap: 6px; }
+  .testimonials__grid { grid-template-columns: 1fr; gap: 40px; }
+  .workshop-gallery__grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 110px; }
+  .workshop-gallery__item--wide { grid-column: span 2; }
+  .final-cta__group { flex-direction: column; align-items: stretch; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .workshop-gallery__item img,
+  .teacher__image,
+  .outcome__image { transition: none; }
+}
