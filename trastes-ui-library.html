@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trastes — Biblioteca Visual UI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/favi-06.png">
+  <link rel="stylesheet" href="css/trastes-ui.css" />
+</head>
+<body>
+
+  <!-- NAV LATERAL FIJA -->
+  <nav class="ui-sidenav" aria-label="Secciones de la biblioteca">
+    <div class="ui-sidenav__brand">T</div>
+    <ul class="ui-sidenav__list">
+      <li><a href="#s-portada"      class="ui-sidenav__link" title="Portada">01</a></li>
+      <li><a href="#s-colores"      class="ui-sidenav__link" title="Colores">02</a></li>
+      <li><a href="#s-tipografia"   class="ui-sidenav__link" title="Tipografía">03</a></li>
+      <li><a href="#s-espaciado"    class="ui-sidenav__link" title="Espaciado">04</a></li>
+      <li><a href="#s-botones"      class="ui-sidenav__link" title="Botones">05</a></li>
+      <li><a href="#s-cursor"       class="ui-sidenav__link" title="Cursor">06</a></li>
+      <li><a href="#s-loader"       class="ui-sidenav__link" title="Loader">07</a></li>
+      <li><a href="#s-header"       class="ui-sidenav__link" title="Header">08</a></li>
+      <li><a href="#s-hero"         class="ui-sidenav__link" title="Hero">09</a></li>
+      <li><a href="#s-cards"        class="ui-sidenav__link" title="Cards">10</a></li>
+      <li><a href="#s-formulario"   class="ui-sidenav__link" title="Formulario">11</a></li>
+      <li><a href="#s-animaciones"  class="ui-sidenav__link" title="Animaciones">12</a></li>
+      <li><a href="#s-texturas"     class="ui-sidenav__link" title="Texturas">13</a></li>
+      <li><a href="#s-principios"   class="ui-sidenav__link" title="Principios">14</a></li>
+    </ul>
+  </nav>
+
+  <!-- ================================================================
+       01. PORTADA
+       ================================================================ -->
+  <section class="ui-section ui-section--cover" id="s-portada">
+    <div class="ui-cover__bg" aria-hidden="true">
+      <div class="ui-cover__dot-grid"></div>
+    </div>
+    <div class="ui-cover__content">
+      <p class="ui-cover__eyebrow">Sistema Visual</p>
+      <h1 class="ui-cover__title">TRASTES<br /><em>UI Library</em></h1>
+      <p class="ui-cover__sub">Escuela de Luthería — Documento maestro de diseño</p>
+      <div class="ui-cover__meta">
+        <span>v3.0</span>
+        <span class="ui-cover__sep">·</span>
+        <span>Cormorant Garamond + Montserrat</span>
+        <span class="ui-cover__sep">·</span>
+        <span>HTML / CSS / JS Vanilla</span>
+      </div>
+    </div>
+    <div class="ui-cover__index" aria-hidden="true">
+      <span>01 Colores</span><span>02 Tipografía</span><span>03 Espaciado</span>
+      <span>04 Botones</span><span>05 Cursor</span><span>06 Loader</span>
+      <span>07 Header</span><span>08 Hero</span><span>09 Cards</span>
+      <span>10 Formulario</span><span>11 Animaciones</span><span>12 Texturas</span>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       02. PALETA DE COLOR
+       ================================================================ -->
+  <section class="ui-section" id="s-colores">
+    <div class="ui-section__inner">
+      <header class="ui-section__header">
+        <span class="ui-label">02</span>
+        <h2 class="ui-section__title">Paleta de <em>color</em></h2>
+        <p class="ui-section__desc">Seis valores. Dos familias. Sin grises neutros: toda la escala vive dentro del universo cálido.</p>
+      </header>
+
+      <div class="color-grid">
+
+        <div class="color-swatch color-swatch--beige">
+          <div class="color-swatch__chip"></div>
+          <div class="color-swatch__info">
+            <span class="color-swatch__name">Beige</span>
+            <span class="color-swatch__hex">#E2D9CB</span>
+            <span class="color-swatch__var">--color-beige</span>
+            <span class="color-swatch__role">Fondo principal · Texto sobre oscuro · Botones en contexto vino</span>
+          </div>
+        </div>
+
+        <div class="color-swatch color-swatch--cream">
+          <div class="color-swatch__chip"></div>
+          <div class="color-swatch__info">
+            <span class="color-swatch__name">Cream</span>
+            <span class="color-swatch__hex">#F0EBE2</span>
+            <span class="color-swatch__var">--color-cream</span>
+            <span class="color-swatch__role">Hover de cards · Variante clara de fondo · Loader</span>
+          </div>
+        </div>
+
+        <div class="color-swatch color-swatch--wine">
+          <div class="color-swatch__chip"></div>
+          <div class="color-swatch__info">
+            <span class="color-swatch__name">Wine</span>
+            <span class="color-swatch__hex">#540E20</span>
+            <span class="color-swatch__var">--color-wine</span>
+            <span class="color-swatch__role">Color de acento principal · CTAs · Cursiva de título · Cursor</span>
+          </div>
+        </div>
+
+        <div class="color-swatch color-swatch--winelt">
+          <div class="color-swatch__chip"></div>
+          <div class="color-swatch__info">
+            <span class="color-swatch__name">Wine Light</span>
+            <span class="color-swatch__hex">#7A1A30</span>
+            <span class="color-swatch__var">--color-wine-lt</span>
+            <span class="color-swatch__role">Hover de botones vino · Variante de acento</span>
+          </div>
+        </div>
+
+        <div class="color-swatch color-swatch--blue">
+          <div class="color-swatch__chip"></div>
+          <div class="color-swatch__info">
+            <span class="color-swatch__name">Blue</span>
+            <span class="color-swatch__hex">#94B2C9</span>
+            <span class="color-swatch__var">--color-blue</span>
+            <span class="color-swatch__role">Acento frío · Links en oscuro · Línea active de formulario · Números timeline</span>
+          </div>
+        </div>
+
+        <div class="color-swatch color-swatch--black">
+          <div class="color-swatch__chip"></div>
+          <div class="color-swatch__info">
+            <span class="color-swatch__name">Black</span>
+            <span class="color-swatch__hex">#180906</span>
+            <span class="color-swatch__var">--color-black</span>
+            <span class="color-swatch__role">Fondos oscuros (Statement, Timeline, Formulario) · Texto principal</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Combinaciones de uso -->
+      <div class="color-combos">
+        <h3 class="ui-subsection-title">Combinaciones de uso</h3>
+        <div class="color-combos__grid">
+          <div class="color-combo" style="background:#E2D9CB; color:#180906;">
+            <span class="color-combo__label">Beige / Black</span>
+            <span class="color-combo__use">Secciones claro: About, Benefits, Materials</span>
+          </div>
+          <div class="color-combo" style="background:#180906; color:#E2D9CB;">
+            <span class="color-combo__label">Black / Beige</span>
+            <span class="color-combo__use">Statement, Timeline, Formulario, Footer</span>
+          </div>
+          <div class="color-combo" style="background:#540E20; color:#E2D9CB;">
+            <span class="color-combo__label">Wine / Beige</span>
+            <span class="color-combo__use">Mobile menu, botones primarios</span>
+          </div>
+          <div class="color-combo" style="background:#E2D9CB; color:#540E20;">
+            <span class="color-combo__label">Beige / Wine</span>
+            <span class="color-combo__use">Eyebrows, labels, section-num en claro</span>
+          </div>
+          <div class="color-combo" style="background:#180906; color:#94B2C9;">
+            <span class="color-combo__label">Black / Blue</span>
+            <span class="color-combo__use">Timeline, números mobile menu, footer headings</span>
+          </div>
+          <div class="color-combo" style="background:#94B2C9; color:#540E20;">
+            <span class="color-combo__label">Blue / Wine</span>
+            <span class="color-combo__use">Botón Submit, footer CTA</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       03. SISTEMA TIPOGRÁFICO
+       ================================================================ -->
+  <section class="ui-section ui-section--dark" id="s-tipografia">
+    <div class="ui-section__inner">
+      <header class="ui-section__header">
+        <span class="ui-label ui-label--light">03</span>
+        <h2 class="ui-section__title ui-section__title--light">Sistema <em>tipográfico</em></h2>
+        <p class="ui-section__desc ui-section__desc--light">Dos familias. Un sistema de pesos y tamaños escalable con clamp().</p>
+      </header>
+
+      <!-- Familia Serif -->
+      <div class="type-family">
+        <div class="type-family__header">
+          <span class="type-family__label">Cormorant Garamond — Serif editorial</span>
+          <span class="type-family__use">Títulos · Cuerpo de texto de apoyo · Citas · Nombres de materiales y cursos</span>
+        </div>
+        <div class="type-specimens">
+          <div class="type-specimen">
+            <p class="type-specimen__sample" style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:72px; line-height:1;">El arte de<br /><em style="color:#540E20;">crear sonido</em></p>
+            <div class="type-specimen__meta">
+              <span>300 · 72px · lh 1</span>
+              <span>Hero principal H1</span>
+            </div>
+          </div>
+          <div class="type-specimen">
+            <p class="type-specimen__sample" style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:52px; line-height:1.1;">Luthería<br /><em style="color:#540E20;">artesanal</em></p>
+            <div class="type-specimen__meta">
+              <span>300 · clamp(35px → 65px) · lh 1.1</span>
+              <span>H2 de sección</span>
+            </div>
+          </div>
+          <div class="type-specimen">
+            <p class="type-specimen__sample" style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:26px; line-height:1.2;">Abeto <em style="color:#540E20;">Europeo</em></p>
+            <div class="type-specimen__meta">
+              <span>300 · 26px · lh 1.2</span>
+              <span>Nombre de material / curso</span>
+            </div>
+          </div>
+          <div class="type-specimen">
+            <p class="type-specimen__sample" style="font-family:'Cormorant Garamond',serif; font-weight:300; font-style:italic; font-size:20px; line-height:1.4; color:rgba(226,217,203,0.55);">"Construir un instrumento es el acto más silencioso de hacer música."</p>
+            <div class="type-specimen__meta">
+              <span>300 italic · 20px · lh 1.4</span>
+              <span>Cita / caption</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Familia Sans -->
+      <div class="type-family" style="margin-top:56px;">
+        <div class="type-family__header">
+          <span class="type-family__label">Montserrat — Sans funcional</span>
+          <span class="type-family__use">Navegación · Labels · Eyebrows · Cuerpo auxiliar · Botones</span>
+        </div>
+        <div class="type-specimens">
+          <div class="type-specimen">
+            <p class="type-specimen__sample" style="font-family:'Montserrat',sans-serif; font-weight:500; font-size:9px; letter-spacing:0.35em; text-transform:uppercase; color:#94B2C9;">ESCUELA DE LUTHERÍA</p>
+            <div class="type-specimen__meta">
+              <span>500 · 9px · ls 0.35em · uppercase</span>
+              <span>Eyebrow / section-num / label</span>
+            </div>
+          </div>
+          <div class="type-specimen">
+            <p class="type-specimen__sample" style="font-family:'Montserrat',sans-serif; font-weight:500; font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:#E2D9CB;">Nosotros · Cursos · Admisión</p>
+            <div class="type-specimen__meta">
+              <span>500 · 9px · ls 0.2em · uppercase</span>
+              <span>Navegación del header</span>
+            </div>
+          </div>
+          <div class="type-specimen">
+            <p class="type-specimen__sample" style="font-family:'Montserrat',sans-serif; font-weight:300; font-size:13px; line-height:1.85; color:rgba(226,217,203,0.6);">Luthería artesanal para dominar la técnica, comprender la madera y desarrollar instrumentos únicos de sonido propio.</p>
+            <div class="type-specimen__meta">
+              <span>300 · 13px · lh 1.85</span>
+              <span>Cuerpo de texto auxiliar</span>
+            </div>
+          </div>
+          <div class="type-specimen">
+            <p class="type-specimen__sample" style="font-family:'Montserrat',sans-serif; font-weight:500; font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:#E2D9CB;">Conocé nuestros cursos</p>
+            <div class="type-specimen__meta">
+              <span>500 · 10px · ls 0.2em · uppercase</span>
+              <span>Texto de botón</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Escala tipográfica -->
+      <div class="type-scale">
+        <h3 class="ui-subsection-title ui-subsection-title--light">Escala con clamp()</h3>
+        <table class="type-scale__table">
+          <thead>
+            <tr>
+              <th>Rol</th><th>Valor clamp</th><th>Familia</th><th>Peso</th><th>Uso</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>H1 Hero</td><td>clamp(60px, 7rem, 112px)</td><td>Cormorant</td><td>485</td><td>Título principal del hero</td></tr>
+            <tr><td>H2 Sección</td><td>clamp(35px, 4.5vw, 65px)</td><td>Cormorant</td><td>485</td><td>Títulos de About, Cursos, FAQ…</td></tr>
+            <tr><td>H3 Card</td><td>clamp(14px, 3.5vw, 32px)</td><td>Cormorant</td><td>300</td><td>Benefit cards, material names</td></tr>
+            <tr><td>Body aux</td><td>13px fijo</td><td>Montserrat</td><td>300</td><td>Párrafos descriptivos</td></tr>
+            <tr><td>Label / eyebrow</td><td>9–10px fijo</td><td>Montserrat</td><td>500–600</td><td>section-num, eyebrows, tags</td></tr>
+            <tr><td>Caption</td><td>9px fijo</td><td>Montserrat</td><td>400</td><td>Fotografías, footer legal</td></tr>
+            <tr><td>Botón</td><td>10–11px fijo</td><td>Montserrat</td><td>500</td><td>CTAs, nav links</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       04. SISTEMA DE ESPACIADO
+       ================================================================ -->
+  <section class="ui-section" id="s-espaciado">
+    <div class="ui-section__inner">
+      <header class="ui-section__header">
+        <span class="ui-label">04</span>
+        <h2 class="ui-section__title">Sistema de <em>espaciado</em></h2>
+        <p class="ui-section__desc">Variables CSS globales que controlan márgenes, paddings y grillas en todo el proyecto.</p>
+      </header>
+
+      <div class="spacing-grid">
+
+        <div class="spacing-item">
+          <div class="spacing-item__bar" style="width:80px; background:#540E20;"></div>
+          <div class="spacing-item__info">
+            <code>--section-padding</code>
+            <span>clamp(50px, 6vw, 90px)</span>
+            <span class="spacing-item__use">Padding vertical de cada sección</span>
+          </div>
+        </div>
+
+        <div class="spacing-item">
+          <div class="spacing-item__bar" style="width:64px; background:#540E20;"></div>
+          <div class="spacing-item__info">
+            <code>--container-pad</code>
+            <span>clamp(24px, 5vw, 80px)</span>
+            <span class="spacing-item__use">Padding horizontal del contenedor</span>
+          </div>
+        </div>
+
+        <div class="spacing-item">
+          <div class="spacing-item__bar" style="width:100px; background:#94B2C9;"></div>
+          <div class="spacing-item__info">
+            <code>--container-max</code>
+            <span>1280px</span>
+            <span class="spacing-item__use">Ancho máximo de contenido</span>
+          </div>
+        </div>
+
+        <div class="spacing-item">
+          <div class="spacing-item__bar" style="width:48px; background:#180906;"></div>
+          <div class="spacing-item__info">
+            <code>--header-h</code>
+            <span>80px</span>
+            <span class="spacing-item__use">Altura del header fijo</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Grid system -->
+      <div class="grid-demo">
+        <h3 class="ui-subsection-title">Sistema de grillas</h3>
+        <div class="grid-demo__examples">
+
+          <div class="grid-demo__item">
+            <span class="grid-demo__label">2 columnas — About, Proceso, Admission</span>
+            <div class="grid-demo__visual grid-demo__visual--2">
+              <div class="grid-demo__col"></div>
+              <div class="grid-demo__col"></div>
+            </div>
+            <code>grid-template-columns: 1fr 1fr · gap: 80px</code>
+          </div>
+
+          <div class="grid-demo__item">
+            <span class="grid-demo__label">3 columnas — Cursos, Materiales, Benefits</span>
+            <div class="grid-demo__visual grid-demo__visual--3">
+              <div class="grid-demo__col"></div>
+              <div class="grid-demo__col"></div>
+              <div class="grid-demo__col"></div>
+            </div>
+            <code>grid-template-columns: repeat(3,1fr) · gap: 1px (separador)</code>
+          </div>
+
+          <div class="grid-demo__item">
+            <span class="grid-demo__label">Footer — 1fr / 1.5fr</span>
+            <div class="grid-demo__visual grid-demo__visual--footer">
+              <div class="grid-demo__col" style="flex:1"></div>
+              <div class="grid-demo__col" style="flex:1.5"></div>
+            </div>
+            <code>grid-template-columns: 1fr 1.5fr · gap: 80px</code>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       05. SISTEMA DE BOTONES
+       ================================================================ -->
+  <section class="ui-section ui-section--split" id="s-botones">
+    <div class="ui-section__inner">
+      <header class="ui-section__header">
+        <span class="ui-label">05</span>
+        <h2 class="ui-section__title">Sistema de <em>botones</em></h2>
+        <p class="ui-section__desc">Cinco variantes. Todos comparten la base <code>.btn</code> con fill ascendente en hover.</p>
+      </header>
+
+      <div class="btn-showcase">
+
+        <!-- Sobre fondo claro -->
+        <div class="btn-showcase__context btn-showcase__context--light">
+          <span class="btn-showcase__ctx-label">Sobre beige / cream</span>
+
+          <div class="btn-showcase__row">
+            <div class="btn-showcase__item">
+              <a href="#" class="btn--demo btn--hero-primary-demo">Conocé nuestros cursos</a>
+              <div class="btn-showcase__meta">
+                <code>.btn--hero-primary</code>
+                <span>Hero CTA · bg wine · color beige · hover: fill negro</span>
+              </div>
+            </div>
+
+            <div class="btn-showcase__item">
+              <a href="#" class="btn--demo btn--dark-demo">Ver programa</a>
+              <div class="btn-showcase__meta">
+                <code>.btn--dark</code>
+                <span>CTA secundario en claro · bg black · hover: fill wine</span>
+              </div>
+            </div>
+
+            <div class="btn-showcase__item">
+              <a href="#" class="btn--demo btn--line-demo">Solicitar admisión</a>
+              <div class="btn-showcase__meta">
+                <code>.btn--line</code>
+                <span>Ghost en claro · border black · hover: fill black</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sobre fondo oscuro -->
+        <div class="btn-showcase__context btn-showcase__context--dark">
+          <span class="btn-showcase__ctx-label" style="color:rgba(226,217,203,0.4)">Sobre negro / vino oscuro</span>
+
+          <div class="btn-showcase__row">
+            <div class="btn-showcase__item">
+              <a href="#" class="btn--demo btn--solid-demo">Enviar solicitud</a>
+              <div class="btn-showcase__meta">
+                <code>.btn--solid</code>
+                <span>Submit form · bg blue · color wine · hover: fill beige</span>
+              </div>
+            </div>
+
+            <div class="btn-showcase__item">
+              <a href="#" class="btn--demo btn--ghost-demo">Ver recorrido</a>
+              <div class="btn-showcase__meta">
+                <code>.btn--ghost</code>
+                <span>CTA en oscuro · border beige/35% · hover: fill beige/12%</span>
+              </div>
+            </div>
+
+            <div class="btn-showcase__item">
+              <a href="#" class="btn--demo btn--footer-demo">Biblioteca UI</a>
+              <div class="btn-showcase__meta">
+                <code>.footer-cta-btn</code>
+                <span>CTA footer · bg blue · color wine · hover: bg beige</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Anatomía del botón -->
+      <div class="btn-anatomy">
+        <h3 class="ui-subsection-title">Anatomía común</h3>
+        <div class="btn-anatomy__code">
+<pre><code>/* Base compartida por todos los botones */
+.btn {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 15px 32px;
+  position: relative;
+  overflow: hidden;
+  transition: color var(--transition-medium);
+}
+
+/* Fill ascendente en hover — el secreto de la sensación premium */
+.btn::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 0;
+  transition: height var(--transition-medium);
+  z-index: 0;
+}
+.btn:hover::before { height: 100%; }
+
+/* Transiciones */
+--transition-slow:   0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+--transition-medium: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+--transition-fast:   0.25s ease</code></pre>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       06. CURSOR PERSONALIZADO
+       ================================================================ -->
+  <section class="ui-section" id="s-cursor">
+    <div class="ui-section__inner">
+      <header class="ui-section__header">
+        <span class="ui-label">06</span>
+        <h2 class="ui-section__title">Cursor <em>personalizado</em></h2>
+        <p class="ui-section__desc">Dos capas: punto fijo wine + anillo que sigue con inercia. Cuatro estados según el contexto de la sección.</p>
+      </header>
+
+      <div class="cursor-states">
+
+        <div class="cursor-state cursor-state--default">
+          <div class="cursor-preview">
+            <div class="cursor-preview__dot" style="background:#540E20;"></div>
+            <div class="cursor-preview__ring" style="border-color:rgba(84,14,32,0.55);"></div>
+          </div>
+          <div class="cursor-state__info">
+            <code>default</code>
+            <span>Dot: wine · Ring: wine/55% · 6px / 36px</span>
+            <span class="cursor-state__trigger">Secciones beige / cream</span>
+          </div>
+        </div>
+
+        <div class="cursor-state cursor-state--hover">
+          <div class="cursor-preview">
+            <div class="cursor-preview__dot" style="background:#540E20; width:10px; height:10px;"></div>
+            <div class="cursor-preview__ring" style="border-color:rgba(84,14,32,0.35); width:52px; height:52px;"></div>
+          </div>
+          <div class="cursor-state__info">
+            <code>.cursor-hover</code>
+            <span>Dot: 10px · Ring: 52px / wine/35%</span>
+            <span class="cursor-state__trigger">Al pasar sobre links, botones e interactivos</span>
+          </div>
+        </div>
+
+        <div class="cursor-state cursor-state--dark" style="background:#180906;">
+          <div class="cursor-preview">
+            <div class="cursor-preview__dot" style="background:#94B2C9;"></div>
+            <div class="cursor-preview__ring" style="border-color:rgba(148,178,201,0.7);"></div>
+          </div>
+          <div class="cursor-state__info" style="color:#E2D9CB;">
+            <code>.cursor-dark</code>
+            <span>Dot: blue · Ring: blue/70%</span>
+            <span class="cursor-state__trigger" style="color:rgba(226,217,203,0.4)">Secciones oscuras: Statement, Timeline, Footer</span>
+          </div>
+        </div>
+
+        <div class="cursor-state cursor-state--light" style="background:#540E20;">
+          <div class="cursor-preview">
+            <div class="cursor-preview__dot" style="background:#E2D9CB;"></div>
+            <div class="cursor-preview__ring" style="border-color:rgba(226,217,203,0.65);"></div>
+          </div>
+          <div class="cursor-state__info" style="color:#E2D9CB;">
+            <code>.cursor-light</code>
+            <span>Dot: beige · Ring: beige/65%</span>
+            <span class="cursor-state__trigger" style="color:rgba(226,217,203,0.5)">Mobile menu (fondo wine)</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="cursor-anatomy">
+        <h3 class="ui-subsection-title">Estructura HTML</h3>
+        <div class="btn-anatomy__code">
+<pre><code>&lt;div class="cursor" id="cursor" aria-hidden="true"&gt;
+  &lt;div class="cursor__dot"  id="cursor-dot"&gt;&lt;/div&gt;
+  &lt;div class="cursor__ring" id="cursor-ring"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+/* JS: el punto sigue en tiempo real (rAF).
+   El anillo sigue con lerp: ring += (target - ring) * 0.12
+   body.classList.toggle('cursor-hover') en mouseenter/leave de [href], button
+   body.classList.toggle('cursor-dark')  al entrar en .statement, .timeline, .admission
+   body.classList.toggle('cursor-light') al entrar en .mobile-menu */</code></pre>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       07. LOADER
+       ================================================================ -->
+  <section class="ui-section ui-section--dark" id="s-loader">
+    <div class="ui-section__inner">
+      <header class="ui-section__header">
+        <span class="ui-label ui-label--light">07</span>
+        <h2 class="ui-section__title ui-section__title--light">Loader <em>inicial</em></h2>
+        <p class="ui-section__desc ui-section__desc--light">Pantalla de carga sobre beige. Logo animado + barra de progreso + contador numérico.</p>
+      </header>
+
+      <!-- Maqueta del loader -->
+      <div class="loader-preview">
+        <div class="loader-preview__inner">
+          <div class="loader-preview__brand">
+            <div class="loader-preview__logo-placeholder">TRASTES</div>
+            <span class="loader-preview__sub">Escuela de Luthería</span>
+          </div>
+          <div class="loader-preview__progress">
+            <div class="loader-preview__bar" style="width:72%"></div>
+          </div>
+          <span class="loader-preview__counter">72</span>
+        </div>
+      </div>
+
+      <div class="btn-anatomy__code" style="margin-top:32px;">
+<pre><code>/* Loader: fondo beige con logo animado */
+.loader { background: var(--color-beige); }
+
+/* Logo: fade+up con cubic-bezier(0.16,1,0.3,1) */
+.loader__logo { animation: loader-word-in 0.9s ease 0.2s both; }
+@keyframes loader-word-in {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Ocultar: opacity 0 + visibility hidden → 0.8s ease */
+.loader.is-hidden { opacity: 0; visibility: hidden; }
+
+/* JS: incrementa .loader__progress-bar width de 0 a 100%
+   Dura ~1.8s. Al llegar a 100%, espera 300ms y añade .is-hidden */</code></pre>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       08. HEADER
+       ================================================================ -->
+  <section class="ui-section" id="s-header">
+    <div class="ui-section__inner">
+      <header class="ui-section__header">
+        <span class="ui-label">08</span>
+        <h2 class="ui-section__title">Header <em>sticky</em></h2>
+        <p class="ui-section__desc">Grid de 3 columnas. Logo centrado. Nav a ambos lados. Cuatro estados de contexto.</p>
+      </header>
+
+      <!-- Preview de los estados del header -->
+      <div class="header-states">
+
+        <div class="header-preview header-preview--hero">
+          <div class="header-preview__inner">
+            <span class="header-preview__nav">Nosotros · Entorno · Cursos</span>
+            <span class="header-preview__logo">TRASTES</span>
+            <span class="header-preview__nav">Proceso · Recorrido · <span style="border:1px solid rgba(226,217,203,.35); padding:4px 10px;">Admisión</span></span>
+          </div>
+          <span class="header-preview__label">.in-hero — Sobre el hero: bg wine/75%, texto beige</span>
+        </div>
+
+        <div class="header-preview header-preview--scrolled">
+          <div class="header-preview__inner">
+            <span class="header-preview__nav" style="color:rgba(226,217,203,0.7)">Nosotros · Entorno · Cursos</span>
+            <span class="header-preview__logo" style="color:#E2D9CB;">TRASTES</span>
+            <span class="header-preview__nav" style="color:rgba(226,217,203,0.7)">Proceso · Recorrido · <span style="border:1px solid rgba(226,217,203,.3); padding:4px 10px; color:#E2D9CB;">Admisión</span></span>
+          </div>
+          <span class="header-preview__label" style="color:rgba(226,217,203,0.4)">.is-scrolled — Scroll activo: bg black/75%, blur(20px)</span>
+        </div>
+
+        <div class="header-preview header-preview--light">
+          <div class="header-preview__inner">
+            <span class="header-preview__nav" style="color:#180906;">Nosotros · Entorno · Cursos</span>
+            <span class="header-preview__logo" style="color:#180906;">TRASTES</span>
+            <span class="header-preview__nav" style="color:#180906;">Proceso · Recorrido · <span style="border:1px solid rgba(24,9,6,0.25); padding:4px 10px; color:#180906;">Admisión</span></span>
+          </div>
+          <span class="header-preview__label" style="color:rgba(24,9,6,0.4)">.is-light — Secciones claras: bg beige/88%, texto black</span>
+        </div>
+
+      </div>
+
+      <div class="btn-anatomy__code" style="margin-top:32px;">
+<pre><code>/* Grid de 3 columnas */
+.header__inner { display: grid; grid-template-columns: 1fr auto 1fr; gap: 100px; }
+
+/* Los tres estados del header */
+.site-header { background: rgba(226,217,203,0.82); backdrop-filter: blur(18px); }
+.site-header.in-hero { background: rgba(26,9,5,0.75); }
+.site-header.is-scrolled { background: rgba(26,9,5,0.75); }
+.site-header.is-light { background: rgba(226,217,203,0.88); }
+
+/* Nav link: underline que crece desde la izquierda */
+.header__nav-link::after {
+  content: ''; position: absolute; left: 0; bottom: -3px;
+  width: 0; height: 1px; background: var(--color-wine);
+  transition: width var(--transition-medium);
+}
+.header__nav-link:hover::after { width: 100%; }
+
+/* CTA nav: fill vino desde abajo */
+.header__nav-link--cta::before { background: var(--color-wine); }
+.header__nav-link--cta:hover::before { height: 100%; }
+
+/* Logo: dos imágenes superpuestas, opacity transition */
+.header__logo-img--light { opacity: 1; }
+.header__logo-img--dark  { opacity: 0; }
+.site-header.is-light .header__logo-img--light { opacity: 0; }
+.site-header.is-light .header__logo-img--dark  { opacity: 1; }</code></pre>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       09. HERO SYSTEM
+       ================================================================ -->
+  <section class="ui-section ui-section--dark" id="s-hero">
+    <div class="ui-section__inner">
+      <header class="ui-section__header">
+        <span class="ui-label ui-label--light">09</span>
+        <h2 class="ui-section__title ui-section__title--light">Hero <em>system</em></h2>
+        <p class="ui-section__desc ui-section__desc--light">Imagen fullscreen con margen exterior beige. Texto editorial superpuesto en la zona inferior izquierda.</p>
+      </header>
+
+      <!-- Anatomía visual del hero -->
+      <div class="hero-anatomy">
+        <div class="hero-anatomy__diagram">
+          <div class="hero-anatomy__beige-frame">
+            <span class="hero-anatomy__frame-label">Fondo beige + dot-grid · padding: 90px top · clamp(28px,4vw,64px) sides</span>
+            <div class="hero-anatomy__figure">
+              <div class="hero-anatomy__gradient"></div>
+              <div class="hero-anatomy__content">
+                <p class="hero-anatomy__eyebrow">ESCUELA DE LUTHERÍA</p>
+                <p class="hero-anatomy__title">El arte de<br /><em>crear sonido</em></p>
+                <p class="hero-anatomy__desc">Luthería artesanal para dominar la técnica…</p>
+                <div class="hero-anatomy__btns">
+                  <span class="hero-anatomy__btn-p">Conocé nuestros cursos</span>
+                </div>
+              </div>
+              <div class="hero-anatomy__gallery-block">
+                <div class="hero-anatomy__gallery-inner"></div>
+                <div class="hero-anatomy__gallery-dots">
+                  <span style="background:#540E20; transform:scale(1.4)"></span>
+                  <span></span><span></span>
+                </div>
+              </div>
+              <div class="hero-anatomy__fade-bottom"></div>
+              <span class="hero-anatomy__img-label">Foto: aspect-ratio 15/7 desktop · 4/5 tablet · 3/4 mobile</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Elementos del hero -->
+      <div class="hero-elements">
+        <h3 class="ui-subsection-title ui-subsection-title--light">Elementos del hero</h3>
+        <div class="hero-elements__grid">
+
+          <div class="hero-element">
+            <span class="hero-element__label">Eyebrow</span>
+            <p class="hero-element__sample" style="font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.35em; text-transform:uppercase; color:#540E20;">ESCUELA DE LUTHERÍA</p>
+            <code>Montserrat · 700 · 9px → 15px · ls 0.35em · color-wine</code>
+          </div>
+
+          <div class="hero-element">
+            <span class="hero-element__label">H1 Título</span>
+            <p class="hero-element__sample" style="font-family:'Cormorant Garamond',serif; font-size:52px; font-weight:485; line-height:0.85; color:#540E20;">El arte de<br /><em>crear sonido</em></p>
+            <code>Cormorant · 485 · 7rem fijo (3.8rem mobile) · lh 0.85 · text-shadow wine</code>
+          </div>
+
+          <div class="hero-element">
+            <span class="hero-element__label">Bajada</span>
+            <p class="hero-element__sample" style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:400; line-height:1.78; color:rgba(24,9,6,0.75);">Luthería artesanal para dominar la técnica, comprender la madera y desarrollar instrumentos únicos.</p>
+            <code>Montserrat · 400 · clamp(12px,1.2vw,14px) · lh 1.78 · color black</code>
+          </div>
+
+          <div class="hero-element">
+            <span class="hero-element__label">Galería flotante</span>
+            <div class="hero-element__gallery-demo">
+              <div class="hero-element__gallery-track"></div>
+              <div class="hero-element__gallery-dots">
+                <span style="background:#540E20;width:5px;height:5px;border-radius:50%;display:block;"></span>
+                <span style="background:rgba(24,9,5,0.2);width:4px;height:4px;border-radius:50%;display:block;"></span>
+                <span style="background:rgba(24,9,5,0.2);width:4px;height:4px;border-radius:50%;display:block;"></span>
+              </div>
+            </div>
+            <code>Posición: absolute, bottom -7vw, right 4vw · Marco beige + padding interno · Crossfade 5s · aspect 3/4</code>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="btn-anatomy__code" style="margin-top:32px;">
+<pre><code>/* .reveal-hero: animación de entrada del hero */
+.reveal-hero {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.85s cubic-bezier(0.16,1,0.3,1) var(--hd,0s),
+              transform 0.85s cubic-bezier(0.16,1,0.3,1) var(--hd,0s);
+}
+.reveal-hero.is-visible { opacity: 1; transform: translateY(0); }
+
+/* Delays escalonados en el HTML: style="--hd:0.05s" / 0.15s / 0.25s / 0.35s */
+
+/* Gradiente de fade en la parte inferior de la foto */
+.hero__figure::before {
+  background: linear-gradient(to bottom, transparent, #E2D9CB);
+  height: 100px; bottom: 0; z-index: 1;
+}</code></pre>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       10. COMPONENTES — CARDS
+       ================================================================ -->
+  <section class="ui-section" id="s-cards">
+    <div class="ui-section__inner">
+      <header class="ui-section__header">
+        <span class="ui-label">10</span>
+        <h2 class="ui-section__title">Componentes — <em>Cards</em></h2>
+        <p class="ui-section__desc">Cinco tipos de card. Todos comparten: dot-grid de fondo, hover de color y borde wine en la parte superior.</p>
+      </header>
+
+      <!-- Benefit Card -->
+      <div class="component-block">
+        <h3 class="ui-subsection-title">Benefit Card <code>.benefit-card</code></h3>
+        <div class="component-demo component-demo--3col" style="background:rgba(24,9,6,0.08); gap:1px;">
+          <div class="demo-benefit-card">
+            <div class="demo-benefit-card__inner">
+              <span class="demo-benefit-card__num">01</span>
+              <h4 class="demo-benefit-card__title">Grupos<br /><em>reducidos</em></h4>
+              <p class="demo-benefit-card__desc">Máximo seis alumnos por cursada. El espacio es escaso a propósito.</p>
+            </div>
+          </div>
+          <div class="demo-benefit-card demo-benefit-card--active">
+            <div class="demo-benefit-card__inner">
+              <span class="demo-benefit-card__num" style="color:#540E20">02</span>
+              <h4 class="demo-benefit-card__title">Formación<br /><em>práctica</em></h4>
+              <p class="demo-benefit-card__desc">El 80% del programa ocurre con herramientas en mano.</p>
+            </div>
+          </div>
+          <div class="demo-benefit-card">
+            <div class="demo-benefit-card__inner">
+              <span class="demo-benefit-card__num">03</span>
+              <h4 class="demo-benefit-card__title">Taller<br /><em>equipado</em></h4>
+              <p class="demo-benefit-card__desc">Herramientas de luthería europea y bodega de maderas climatizada.</p>
+            </div>
+          </div>
+        </div>
+        <div class="component-notes">
+          <span>Hover: <code>background-color → --color-cream</code></span>
+          <span>Hover: <code>::before width → 100%</code> — borde wine de 2px arriba</span>
+          <span>Hover: <code>.benefit-card__num color → --color-wine</code></span>
+        </div>
+      </div>
+
+      <!-- Material Card -->
+      <div class="component-block">
+        <h3 class="ui-subsection-title">Material Card <code>.material-card</code></h3>
+        <div class="component-demo component-demo--3col" style="background:rgba(24,9,6,0.1); gap:1px;">
+          <div class="demo-material-card">
+            <div class="demo-material-card__img">
+              <div class="demo-material-card__swatch demo-swatch--abeto"></div>
+            </div>
+            <div class="demo-material-card__body">
+              <span class="demo-material-card__num">I</span>
+              <h4 class="demo-material-card__name">Abeto <em>Europeo</em></h4>
+              <p class="demo-material-card__desc">Picea abies. Tapa armónica de referencia. 420–480 kg/m³.</p>
+              <span class="demo-material-card__tag">Tapa armónica</span>
+            </div>
+          </div>
+          <div class="demo-material-card">
+            <div class="demo-material-card__img">
+              <div class="demo-material-card__swatch demo-swatch--jacaranda"></div>
+            </div>
+            <div class="demo-material-card__body">
+              <span class="demo-material-card__num">II</span>
+              <h4 class="demo-material-card__name">Jacarandá <em>Brasileño</em></h4>
+              <p class="demo-material-card__desc">Dalbergia nigra. Fondo y aros de alto prestigio. 850–950 kg/m³.</p>
+              <span class="demo-material-card__tag">Fondo y aros</span>
+            </div>
+          </div>
+          <div class="demo-material-card">
+            <div class="demo-material-card__img">
+              <div class="demo-material-card__swatch demo-swatch--ebano"></div>
+            </div>
+            <div class="demo-material-card__body">
+              <span class="demo-material-card__num">III</span>
+              <h4 class="demo-material-card__name">Ébano <em>de Macasar</em></h4>
+              <p class="demo-material-card__desc">Diospyros celebica. Diapasón de élite. 1050–1200 kg/m³.</p>
+              <span class="demo-material-card__tag">Diapasón</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course Block -->
+      <div class="component-block">
+        <h3 class="ui-subsection-title">Course Block <code>.course-block</code></h3>
+        <div class="component-demo component-demo--3col" style="gap:28px;">
+          <div class="demo-course-block">
+            <div class="demo-course-block__img"></div>
+            <div class="demo-course-block__body">
+              <span class="demo-course-block__tag">01 · 12 semanas</span>
+              <h4 class="demo-course-block__title">Construcción<br /><em>de Guitarra</em></h4>
+              <p class="demo-course-block__desc">El programa fundacional. De la selección de maderas a la puesta a punto final.</p>
+              <div class="demo-course-block__footer">
+                <span class="demo-course-block__price">$X.XXX</span>
+                <a href="#" class="demo-course-block__link">Inscribirse</a>
+              </div>
+            </div>
+          </div>
+          <div class="demo-course-block demo-course-block--active">
+            <div class="demo-course-block__img" style="background:#94B2C9;"></div>
+            <div class="demo-course-block__body">
+              <span class="demo-course-block__tag">02 · 8 semanas</span>
+              <h4 class="demo-course-block__title">Acústica<br /><em>Avanzada</em></h4>
+              <p class="demo-course-block__desc">Física del sonido aplicada al instrumento. Análisis modal y optimización tonal.</p>
+              <div class="demo-course-block__footer">
+                <span class="demo-course-block__price">$X.XXX</span>
+                <a href="#" class="demo-course-block__link">Inscribirse</a>
+              </div>
+            </div>
+          </div>
+          <div class="demo-course-block">
+            <div class="demo-course-block__img" style="background:#7A1A30;"></div>
+            <div class="demo-course-block__body">
+              <span class="demo-course-block__tag">03 · 10 semanas</span>
+              <h4 class="demo-course-block__title">Restauración<br /><em>y Conservación</em></h4>
+              <p class="demo-course-block__desc">Para quienes trabajan con instrumentos de época. Diagnóstico y reconstrucción.</p>
+              <div class="demo-course-block__footer">
+                <span class="demo-course-block__price">$X.XXX</span>
+                <a href="#" class="demo-course-block__link">Inscribirse</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="component-notes">
+          <span>Hover: <code>transform: translateY(-6px) · box-shadow</code></span>
+          <span>Velo <code>::after</code> — opacity 1 en reposo, 0 al hover. En hover del grid: todas con velo excepto la activa.</span>
+        </div>
+      </div>
+
+      <!-- Timeline Node -->
+      <div class="component-block component-block--dark">
+        <h3 class="ui-subsection-title ui-subsection-title--light">Timeline Node <code>.timeline__node</code></h3>
+        <div class="component-demo" style="overflow-x:auto; padding:40px 0;">
+          <div class="demo-timeline">
+            <div class="demo-timeline__line"></div>
+            <div class="demo-timeline__node">
+              <div class="demo-timeline__dot"></div>
+              <span class="demo-timeline__week">Sem. 1–2</span>
+              <h4 class="demo-timeline__title">Maderas y<br /><em>acústica</em></h4>
+              <p class="demo-timeline__body">Selección y evaluación de maderas. Primera escucha activa.</p>
+            </div>
+            <div class="demo-timeline__node">
+              <div class="demo-timeline__dot"></div>
+              <span class="demo-timeline__week">Sem. 3–4</span>
+              <h4 class="demo-timeline__title">Plano y<br /><em>geometría</em></h4>
+              <p class="demo-timeline__body">Trazado del cuerpo. Cálculo de escala y trastes.</p>
+            </div>
+            <div class="demo-timeline__node">
+              <div class="demo-timeline__dot demo-timeline__dot--final"></div>
+              <span class="demo-timeline__week">Semana 12</span>
+              <h4 class="demo-timeline__title" style="color:#94B2C9;">Primera<br /><em>nota</em></h4>
+              <p class="demo-timeline__body">Entrega del instrumento. Primera ejecución pública.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div class="component-block">
+        <h3 class="ui-subsection-title">FAQ Accordion <code>.faq__item</code></h3>
+        <div class="component-demo">
+          <div class="demo-faq">
+            <div class="demo-faq__item">
+              <div class="demo-faq__question demo-faq__question--open">
+                <span>¿Necesito experiencia previa en carpintería?</span>
+                <span class="demo-faq__icon demo-faq__icon--open">
+                  <span class="demo-faq__bar demo-faq__bar--h" style="background:#540E20;"></span>
+                </span>
+              </div>
+              <div class="demo-faq__answer">
+                <p>No es un requisito. El programa está diseñado para comenzar desde cero con un enfoque progresivo y supervisado.</p>
+              </div>
+            </div>
+            <div class="demo-faq__item">
+              <div class="demo-faq__question">
+                <span>¿Necesito llevar mis herramientas al taller?</span>
+                <span class="demo-faq__icon">
+                  <span class="demo-faq__bar demo-faq__bar--h"></span>
+                  <span class="demo-faq__bar demo-faq__bar--v"></span>
+                </span>
+              </div>
+            </div>
+            <div class="demo-faq__item">
+              <div class="demo-faq__question">
+                <span>¿Qué sucede si el instrumento no queda bien?</span>
+                <span class="demo-faq__icon">
+                  <span class="demo-faq__bar demo-faq__bar--h"></span>
+                  <span class="demo-faq__bar demo-faq__bar--v"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="component-notes">
+          <span>Estado abierto: <code>aria-expanded="true"</code> · barra vertical rota 90° + opacity 0 · texto en italic wine</span>
+          <span>Panel: <code>max-height: 0 → 600px</code> con <code>transition: 0.55s cubic-bezier(0.25,0.46,0.45,0.94)</code></span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       11. FORMULARIO
+       ================================================================ -->
+  <section class="ui-section ui-section--dark" id="s-formulario">
+    <div class="ui-section__inner">
+      <header class="ui-section__header">
+        <span class="ui-label ui-label--light">11</span>
+        <h2 class="ui-section__title ui-section__title--light">Formulario de <em>admisión</em></h2>
+        <p class="ui-section__desc ui-section__desc--light">Campos flotantes. Label que sube al focus. Línea azul que crece desde la izquierda.</p>
+      </header>
+
+      <div class="form-preview">
+        <div class="form-preview__fields">
+
+          <!-- Campo texto -->
+          <div class="demo-field">
+            <input type="text" class="demo-field__input" id="df1" placeholder=" " value="Sofía Ayala" />
+            <label for="df1" class="demo-field__label demo-field__label--up">Nombre completo</label>
+            <div class="demo-field__line">
+              <div class="demo-field__line-fill"></div>
+            </div>
+          </div>
+
+          <!-- Campo email activo -->
+          <div class="demo-field">
+            <input type="email" class="demo-field__input demo-field__input--active" id="df2" placeholder=" " />
+            <label for="df2" class="demo-field__label demo-field__label--active">Correo electrónico</label>
+            <div class="demo-field__line">
+              <div class="demo-field__line-fill demo-field__line-fill--active"></div>
+            </div>
+          </div>
+
+          <!-- Select -->
+          <div class="demo-field">
+            <select class="demo-field__input demo-field__input--select" id="df3">
+              <option value="" disabled selected></option>
+              <option value="construccion" selected>Construcción de Instrumento</option>
+            </select>
+            <label for="df3" class="demo-field__label demo-field__label--up">Especialización de interés</label>
+            <div class="demo-field__line">
+              <div class="demo-field__line-fill" style="width:100%;"></div>
+            </div>
+          </div>
+
+          <!-- Textarea -->
+          <div class="demo-field">
+            <textarea class="demo-field__input" id="df4" placeholder=" " rows="2"></textarea>
+            <label for="df4" class="demo-field__label">Contanos algo sobre vos (opcional)</label>
+            <div class="demo-field__line">
+              <div class="demo-field__line-fill"></div>
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <button class="demo-submit">
+            <span>Enviar solicitud</span>
+          </button>
+        </div>
+
+        <!-- Estado success -->
+        <div class="form-preview__success">
+          <span class="form-preview__ornament">✦</span>
+          <h4 class="form-preview__success-title">Solicitud recibida.</h4>
+          <p class="form-preview__success-body">Un coordinador se pondrá en contacto en las próximas 48 horas hábiles.</p>
+        </div>
+      </div>
+
+      <div class="btn-anatomy__code" style="margin-top:32px;">
+<pre><code>/* Label flotante */
+.field__label { position: absolute; top: 0; left: 0; transition: transform 0.3s, color 0.3s; }
+.field__input:not(:placeholder-shown) ~ .field__label,
+.field__input:focus ~ .field__label { transform: translateY(-10px) scale(0.85); color: var(--color-blue); }
+
+/* Línea activa */
+.field__line::after { content: ''; position: absolute; bottom: 0; left: 0;
+  width: 0; height: 1px; background: var(--color-blue);
+  transition: width var(--transition-medium); }
+.field__input:focus ~ .field__line::after { width: 100%; }
+
+/* Submit: bg blue, color wine → hover: fill beige */
+.btn--submit { background: var(--color-blue); color: var(--color-wine); }</code></pre>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       12. ANIMACIONES
+       ================================================================ -->
+  <section class="ui-section" id="s-animaciones">
+    <div class="ui-section__inner">
+      <header class="ui-section__header">
+        <span class="ui-label">12</span>
+        <h2 class="ui-section__title">Sistema de <em>animaciones</em></h2>
+        <p class="ui-section__desc">Dos familias de reveal. Una galería con crossfade. Un slider de imágenes. Cursor con lerp.</p>
+      </header>
+
+      <div class="anim-grid">
+
+        <div class="anim-item">
+          <div class="anim-item__demo">
+            <div class="anim-demo-box anim-demo-box--reveal-up">
+              <span>reveal-up</span>
+            </div>
+          </div>
+          <div class="anim-item__info">
+            <code>.reveal-up</code>
+            <p>Secciones de contenido: translateY(10px) → 0 + opacity 0 → 1<br />Duration: 0.7s ease<br />Trigger: IntersectionObserver threshold 0.15</p>
+            <p>Uso: todos los bloques de contenido dentro de secciones (títulos, grids, párrafos)</p>
+          </div>
+        </div>
+
+        <div class="anim-item">
+          <div class="anim-item__demo">
+            <div class="anim-demo-box anim-demo-box--reveal-hero">
+              <span>reveal-hero</span>
+            </div>
+          </div>
+          <div class="anim-item__info">
+            <code>.reveal-hero</code>
+            <p>Hero: translateY(18px) → 0 + opacity 0 → 1<br />Duration: 0.85s cubic-bezier(0.16,1,0.3,1)<br />Trigger: tras el loader (clase .is-visible añadida por JS)</p>
+            <p>Delays escalonados vía <code>style="--hd:0.05s"</code>: eyebrow, título, desc, cta</p>
+          </div>
+        </div>
+
+        <div class="anim-item">
+          <div class="anim-item__demo">
+            <div class="anim-demo-box anim-demo-box--crossfade" style="background:#E2D9CB; overflow:hidden;">
+              <div class="anim-crossfade-slide anim-crossfade-slide--a"></div>
+              <div class="anim-crossfade-slide anim-crossfade-slide--b"></div>
+            </div>
+          </div>
+          <div class="anim-item__info">
+            <code>Hero Gallery crossfade</code>
+            <p>Opacity 0 → 1 en el slide activo<br />Duration: 0.9s cubic-bezier(0.4,0,0.2,1)<br />Intervalo: 5s · Pausa en hover y tab oculta</p>
+          </div>
+        </div>
+
+        <div class="anim-item">
+          <div class="anim-item__demo">
+            <div class="anim-demo-box" style="background:#180906; padding:12px; display:flex; align-items:center; justify-content:center;">
+              <div style="width:60px; height:1px; background:rgba(148,178,201,0.3); position:relative;">
+                <div class="anim-slider-bar"></div>
+              </div>
+            </div>
+          </div>
+          <div class="anim-item__info">
+            <code>Environment Slider</code>
+            <p>Imágenes apiladas con opacity:0 · Clase .active da opacity:1<br />Sin CSS transition — el cambio es instantáneo (transition:none !important)<br />Cada imagen tiene <code>--rot</code> random ±2° para efecto de pila</p>
+          </div>
+        </div>
+
+        <div class="anim-item">
+          <div class="anim-item__demo">
+            <div class="anim-demo-box" style="position:relative;">
+              <span style="font-family:'Montserrat',sans-serif; font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(24,9,6,0.5);">Ver curso</span>
+              <div class="anim-underline-demo"></div>
+            </div>
+          </div>
+          <div class="anim-item__info">
+            <code>Nav link hover</code>
+            <p>Línea <code>::after</code>: width 0 → 100%<br />Duration: transition-medium (0.4s)<br />Aplicado a: .header__nav-link, .about__link</p>
+          </div>
+        </div>
+
+        <div class="anim-item">
+          <div class="anim-item__demo">
+            <div class="anim-demo-box" style="position:relative; overflow:hidden; background:#540E20;">
+              <span style="font-family:'Montserrat',sans-serif; font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:#E2D9CB; position:relative; z-index:1;">Conocé nuestros cursos</span>
+              <div class="anim-fill-demo"></div>
+            </div>
+          </div>
+          <div class="anim-item__info">
+            <code>Button fill hover</code>
+            <p>Pseudo <code>::before</code>: height 0 → 100% desde el bottom<br />Duration: transition-medium (0.4s)<br />Aplicado a: todos los .btn</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Manifesto word-reveal -->
+      <div class="component-block" style="margin-top:40px;">
+        <h3 class="ui-subsection-title">Manifesto — Word reveal</h3>
+        <div class="component-demo" style="background:#180906; padding:40px;">
+          <p style="font-family:'Cormorant Garamond',serif; font-size:clamp(28px,3.5vw,48px); font-weight:300; line-height:1.2; color:#E2D9CB;">
+            <span class="demo-word" style="opacity:0.08;">Construir</span>
+            <span class="demo-word" style="opacity:0.08;"> un</span>
+            <span class="demo-word" style="opacity:1;"> instrumento</span>
+            <span class="demo-word" style="opacity:1;"> es</span>
+            <span class="demo-word" style="opacity:0.08;"> el</span>
+            <span class="demo-word" style="opacity:0.08;"> acto</span>
+            <span style="color:#540E20;"> <em>más silencioso</em></span>
+          </p>
+        </div>
+        <div class="component-notes">
+          <span>Cada palabra en <code>&lt;span class="word"&gt;</code> con <code>opacity:0.08</code> por defecto</span>
+          <span>Al scroll: <code>.word.visible → opacity:1</code> con <code>transition: 0.25s ease</code></span>
+          <span>Trigger: posición relativa al viewport via IntersectionObserver o getBoundingClientRect</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       13. TEXTURAS Y FONDOS
+       ================================================================ -->
+  <section class="ui-section ui-section--dark" id="s-texturas">
+    <div class="ui-section__inner">
+      <header class="ui-section__header">
+        <span class="ui-label ui-label--light">13</span>
+        <h2 class="ui-section__title ui-section__title--light">Texturas y <em>fondos</em></h2>
+        <p class="ui-section__desc ui-section__desc--light">Cuatro patrones de fondo. Todas las imágenes de sección tienen overlay semitransparente.</p>
+      </header>
+
+      <div class="texture-grid">
+
+        <div class="texture-swatch texture-swatch--dotgrid">
+          <div class="texture-swatch__preview"></div>
+          <div class="texture-swatch__info">
+            <span class="texture-swatch__name">Dot grid (beige)</span>
+            <code>radial-gradient(circle, rgba(24,9,6,0.04) 1px, transparent 1px) · 28px 28px</code>
+            <span class="texture-swatch__use">Body · Hero · Benefits cards · Material cards</span>
+          </div>
+        </div>
+
+        <div class="texture-swatch texture-swatch--linegrid">
+          <div class="texture-swatch__preview"></div>
+          <div class="texture-swatch__info">
+            <span class="texture-swatch__name">Line grid (oscuro)</span>
+            <code>linear-gradient(rgba(148,178,201,0.03) 1px, transparent 1px) + 90deg · 60px 60px</code>
+            <span class="texture-swatch__use">Statement · Admission</span>
+          </div>
+        </div>
+
+        <div class="texture-swatch texture-swatch--winedot">
+          <div class="texture-swatch__preview"></div>
+          <div class="texture-swatch__info">
+            <span class="texture-swatch__name">Dot grid (vino)</span>
+            <code>radial-gradient(circle, rgba(226,217,203,0.025) 1px, transparent 1px) · 30px 30px</code>
+            <span class="texture-swatch__use">Mobile menu</span>
+          </div>
+        </div>
+
+        <div class="texture-swatch texture-swatch--overlay">
+          <div class="texture-swatch__preview"></div>
+          <div class="texture-swatch__info">
+            <span class="texture-swatch__name">Overlay de imagen</span>
+            <code>rgba(226,217,203,0.72) sobre background-image</code>
+            <span class="texture-swatch__use">About · Benefits · Courses · FAQ — sobre fotos de sección</span>
+          </div>
+        </div>
+
+        <div class="texture-swatch texture-swatch--fade-bottom">
+          <div class="texture-swatch__preview"></div>
+          <div class="texture-swatch__info">
+            <span class="texture-swatch__name">Fade inferior (hero)</span>
+            <code>linear-gradient(to bottom, transparent, #E2D9CB) · height 100px</code>
+            <span class="texture-swatch__use">Borde inferior de la foto del hero — fusiona con el fondo beige</span>
+          </div>
+        </div>
+
+        <div class="texture-swatch texture-swatch--swatches">
+          <div class="texture-swatch__preview" style="display:flex; gap:4px; align-items:center;">
+            <div style="width:32px;height:32px;border-radius:50%;background:repeating-linear-gradient(85deg,#d4c4a0,#d4c4a0 2px,#c9b890 2px,#c9b890 6px);border:2px solid rgba(226,217,203,0.8);"></div>
+            <div style="width:32px;height:32px;border-radius:50%;background:repeating-linear-gradient(78deg,#3d1c0a,#3d1c0a 2px,#5c2d14 2px,#5c2d14 5px);border:2px solid rgba(226,217,203,0.8);"></div>
+            <div style="width:32px;height:32px;border-radius:50%;background:repeating-linear-gradient(70deg,#0f0a06,#0f0a06 3px,#1e1208 3px,#1e1208 6px);border:2px solid rgba(226,217,203,0.8);"></div>
+          </div>
+          <div class="texture-swatch__info">
+            <span class="texture-swatch__name">Swatches de madera</span>
+            <code>repeating-linear-gradient con vetas de madera · borde circular</code>
+            <span class="texture-swatch__use">Material cards — .material-card__swatch (abeto / jacarandá / ébano)</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       14. PRINCIPIOS DE DISEÑO
+       ================================================================ -->
+  <section class="ui-section ui-section--principles" id="s-principios">
+    <div class="ui-section__inner">
+      <header class="ui-section__header">
+        <span class="ui-label">14</span>
+        <h2 class="ui-section__title">Principios de <em>diseño TRASTES</em></h2>
+        <p class="ui-section__desc">Reglas no escritas del sistema. Lo que diferencia este proyecto de un template.</p>
+      </header>
+
+      <div class="principles-grid">
+
+        <div class="principle">
+          <span class="principle__num">I</span>
+          <h3 class="principle__title">El espacio es contenido</h3>
+          <p class="principle__body">Los márgenes amplios no son desperdicios — son parte del mensaje. Una escuela de luthería premium no grita. Respira. Cada sección tiene un padding generoso (<code>clamp(50px,6vw,90px)</code>) y los títulos nunca tocan los bordes.</p>
+        </div>
+
+        <div class="principle">
+          <span class="principle__num">II</span>
+          <h3 class="principle__title">La foto manda, el texto respira</h3>
+          <p class="principle__body">El hero no tiene overlay oscuro. La imagen de fondo es la protagonista. El texto se ubica en la zona inferior izquierda, sobre el gradiente de fade que fusiona la foto con el beige del fondo.</p>
+        </div>
+
+        <div class="principle">
+          <span class="principle__num">III</span>
+          <h3 class="principle__title">Serif para emoción, sans para función</h3>
+          <p class="principle__body">Cormorant Garamond en títulos, citas y nombres. Montserrat en labels, botones, captions y navegación. Nunca al revés. Los itálicos de Cormorant en wine son el único acento tipográfico.</p>
+        </div>
+
+        <div class="principle">
+          <span class="principle__num">IV</span>
+          <h3 class="principle__title">Wine como acento, no como fondo</h3>
+          <p class="principle__body">El #540E20 aparece en: CTAs, cursivas de título, líneas decorativas, borde hover de cards, mobile menu. Nunca como fondo de sección (excepto el menu). El fondo de las secciones es beige, cream, negro o foto con overlay.</p>
+        </div>
+
+        <div class="principle">
+          <span class="principle__num">V</span>
+          <h3 class="principle__title">Las interacciones son suaves o no son</h3>
+          <p class="principle__body">Todos los hovers usan <code>cubic-bezier(0.25,0.46,0.45,0.94)</code>. Sin bounces, sin zooms agresivos. El fill de botones sube desde abajo en 0.4s. El cursor usa lerp (0.12) para seguir con inercia.</p>
+        </div>
+
+        <div class="principle">
+          <span class="principle__num">VI</span>
+          <h3 class="principle__title">Separadores de 1px, no borders</h3>
+          <p class="principle__body">Los grids internos (materiales, benefits, cursos) usan <code>gap:1px</code> y <code>background:rgba(24,9,6,0.08)</code> para crear la apariencia de divisor sin agregar markup. Borders solo en secciones externas.</p>
+        </div>
+
+        <div class="principle">
+          <span class="principle__num">VII</span>
+          <h3 class="principle__title">Dot-grid como textura del sistema</h3>
+          <p class="principle__body">El patrón de puntos <code>rgba(24,9,6,0.04)</code> en 28px×28px es la firma textural del proyecto. Aparece en el body, el hero, las benefit cards y las material cards. Es tan sutil que casi no se ve — pero se siente.</p>
+        </div>
+
+        <div class="principle">
+          <span class="principle__num">VIII</span>
+          <h3 class="principle__title">Nuevas páginas = mismos componentes</h3>
+          <p class="principle__body">Cualquier página nueva del proyecto (curso detalle, blog, about) debe construirse exclusivamente con componentes de esta biblioteca. No se crean estilos nuevos salvo que sea absolutamente indispensable.</p>
+        </div>
+
+      </div>
+
+      <!-- Pie de la UI Library -->
+      <div class="principles-footer">
+        <div class="principles-footer__line"></div>
+        <div class="principles-footer__content">
+          <p class="principles-footer__brand">TRASTES</p>
+          <p class="principles-footer__sub">Escuela de Luthería · Sistema Visual v3.0</p>
+          <p class="principles-footer__credit">Cátedra Belluccia 3 — Sofía Ayala · 2026</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+</body>
+</html>
